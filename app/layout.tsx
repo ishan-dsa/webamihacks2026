@@ -2,14 +2,51 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AMIHACKS 2026 — Let The Code Begin",
+  title: "AMIHACKS 2026 | National Level 24-Hour Hackathon",
+
   description:
-    "A flagship 24-hour innovation and coding hackathon by Amity School of Engineering & Technology, Amity University Rajasthan. ₹70,000+ Prize Pool.",
+    "AMIHACKS 2026 is a 24-hour national-level hackathon organized by Amity School of Engineering & Technology, Amity University Rajasthan. ₹70,000+ Prize Pool.",
+
+  keywords: [
+    "AMIHACKS",
+    "Hackathon",
+    "Hackathon India",
+    "Amity University Rajasthan",
+    "Jaipur Hackathon",
+    "Coding Competition",
+    "National Level Hackathon",
+    "AMIHACKS 2026",
+  ],
+
+  authors: [
+    {
+      name: "AMIHACKS Organizing Committee",
+    },
+  ],
+
+  creator: "AMIHACKS",
+  publisher: "Amity University Rajasthan",
+
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
+
   openGraph: {
-    title: "AMIHACKS 2026 — Let The Code Begin",
+    title: "AMIHACKS 2026",
     description:
-      "A flagship 24-hour hackathon. 24th–25th September 2026. ₹70,000+ Prize Pool.",
+      "National Level 24-Hour Hackathon | ₹70,000+ Prize Pool",
     type: "website",
+    images: ["/icon.png"],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "AMIHACKS 2026",
+    description:
+      "National Level 24-Hour Hackathon | ₹70,000+ Prize Pool",
+    images: ["/icon.png"],
   },
 };
 
