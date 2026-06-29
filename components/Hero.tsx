@@ -61,6 +61,20 @@ export default function Hero() {
           </span>
         </motion.div>
 
+        {/* Countdown */}
+        <motion.div
+          custom={3.5}
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          className="flex flex-col items-center gap-3 mb-14"
+        >
+          <p className="text-white/30 text-xs font-mono-code tracking-widest uppercase">
+            Hackathon Begins In
+          </p>
+          <Countdown />
+        </motion.div>
+        
         {/* Prize Banner */}
         <motion.div
           custom={0.5}
@@ -163,19 +177,7 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        {/* Countdown */}
-        <motion.div
-          custom={3.5}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          className="flex flex-col items-center gap-3 mb-14"
-        >
-          <p className="text-white/30 text-xs font-mono-code tracking-widest uppercase">
-            Hackathon Begins In
-          </p>
-          <Countdown />
-        </motion.div>
+        
 
         {/* Stats */}
         <motion.div
