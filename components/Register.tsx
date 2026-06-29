@@ -12,7 +12,9 @@ export default function Register() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="py-28 px-6 bg-white/[0.01]">
+    <section 
+      id="register"
+      className="py-28 px-6 bg-white/[0.01]">
       <div className="max-w-4xl mx-auto text-center" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
