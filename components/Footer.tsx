@@ -76,18 +76,23 @@ export default function Footer() {
     ✉ amihacks2026@gmail.com
   </a>
 
-  <a
-    href="https://www.google.com/maps/search/?api=1&query=Amity+University+Rajasthan+Jaipur"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-neon transition-colors leading-relaxed"
-  >
-    📍GOOGLE MAPS - Amity University Rajasthan<br />
-    SP-1, Kant Kalwar,<br />
-    NH-11C, Jaipur, Rajasthan
-  </a>
+    
+  <div className="leading-relaxed">
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=Amity+University+Rajasthan+Jaipur"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center mt-4 bg-neon text-black text-xs font-semibold px-4 py-2 rounded-full hover:bg-white transition-colors"
+    >
+      View on Google Maps
+    </a>
+    <p>📍 Amity University Rajasthan</p>
+    <p>SP-1, Kant Kalwar</p>
+    <p>NH-11C, Jaipur, Rajasthan</p>
 
-</div>
+    
+  </div>
+
 </div>
           
           {/* Registration */}
