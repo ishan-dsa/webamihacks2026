@@ -114,7 +114,7 @@ First, pay the registration fee. Then submit the registration form along with yo
           </div>
         </div>
 
-  {/* Bottom bar */}
+ {/* Bottom bar */}
 <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
 
   <span className="text-xs text-white/30">
