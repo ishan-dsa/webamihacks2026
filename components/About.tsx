@@ -33,7 +33,7 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="text-neon font-mono-code text-xs tracking-[0.3em] uppercase mb-4"
         >
-          About the Event
+          About the AmiHacks 2026
         </motion.p>
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -44,29 +44,32 @@ export default function About() {
             transition={{ duration: 0.7, delay: 0.1 }}
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
-              What is{" "}
-              <span className="neon-text">AMIHACKS</span>?
+              About {" "}
+              <span className="neon-text">AMIHACKS</span>
             </h2>
             <p className="text-white/60 text-lg leading-relaxed mb-5">
-              AMIHACKS 2026 is the flagship innovation and coding event of{" "}
-              <span className="text-white font-medium">
-                Amity School of Engineering &amp; Technology
-              </span>{" "}
-              under Amity University Rajasthan.
-            </p>
+  <span className="text-white font-medium">AMIHACKS 2026</span> is the flagship
+  24-hour national hackathon organized by{" "}
+  <span className="text-white font-medium">
+    Amity School of Engineering &amp; Technology (ASET)
+  </span>
+  , Amity University Rajasthan, welcoming students from colleges and
+  universities across India.
+</p>
+
             <p className="text-white/60 text-lg leading-relaxed mb-8">
-              The event brings together creative minds, developers, designers,
-              and innovators to collaborate, solve real-world challenges, and
-              build impactful solutions over{" "}
-              <span className="text-white font-medium">24 intense hours</span>.
-            </p>
+  Participants from across India will collaborate, innovate and build
+  impactful solutions in domains such as Artificial Intelligence,
+  Cybersecurity, Web & App Development, Blockchain, IoT and Open
+  Innovation during an exciting 24-hour hackathon experience.
+</p>
 
             {/* Meta info */}
             <div className="flex flex-col gap-2">
               {[
                 ["Organized By", "Amity School of Engineering & Technology (ASET)"],
                 ["University", "Amity University Rajasthan"],
-                ["Supported By", "Envent Student Council"],
+                ["Participation", "Open to Students Across India"],
                 ["Venue", "Amity University Rajasthan, Jaipur"],
                 ["Duration", "24–25 September 2026 · 24 Hours"],
               ].map(([k, v]) => (
@@ -116,10 +119,12 @@ export default function About() {
             >
               <span className="text-3xl">🚀</span>
               <div>
-                <p className="text-neon font-bold text-lg">Entrepreneurship</p>
-                <p className="text-white/50 text-sm mt-0.5">
-                  Turn ideas into real ventures
-                </p>
+                <p className="text-neon font-bold text-lg">
+  Pan India Hackathon
+</p>
+<p className="text-white/50 text-sm mt-0.5">
+  Open to colleges and universities across India
+</p>
               </div>
             </motion.div>
           </motion.div>
