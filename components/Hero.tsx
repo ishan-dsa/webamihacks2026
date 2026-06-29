@@ -10,9 +10,9 @@ const REGISTER_URL = "https://forms.gle/AzrVWXLTmcJjGP9R7";
 const stats = [
   { value: "24", label: "Hours" },
   { value: "₹70K+", label: "Prize Pool" },
-  { value: "All India", label: "Participation" },
-  { value: "1 Captain + 3", label: "Team Members" },
-  { value: "1–4", label: "Team Members" },
+  { value: "For All", label: "Participation" },
+  { value: "Captain + upto 3", label: "Team Members" },
+
 ];
 
 const fadeUp = {
@@ -47,6 +47,21 @@ export default function Hero() {
       />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 pt-32 pb-20 text-center flex flex-col items-center">
+
+
+         {/* Countdown */}
+        <motion.div
+          custom={3.5}
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          className="flex flex-col items-center gap-3 mb-14"
+        >
+          <p className="text-white/30 text-xs font-mono-code tracking-widest uppercase">
+            Hackathon Begins In
+          </p>
+          <Countdown />
+        </motion.div>
         {/* Badge */}
         <motion.div
           custom={0}
@@ -60,50 +75,13 @@ export default function Hero() {
             24th–25th September 2026 · Jaipur
           </span>
         </motion.div>
-
-        {/* Countdown */}
-        <motion.div
-          custom={3.5}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          className="flex flex-col items-center gap-3 mb-14"
-        >
-          <p className="text-white/30 text-xs font-mono-code tracking-widest uppercase">
-            Hackathon Begins In
-          </p>
-          <Countdown />
-        </motion.div>
-        
-        {/* Prize Banner */}
-        <motion.div
-          custom={0.5}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          className="flex flex-wrap justify-center gap-3 mb-8"
-        >
-          <div className="glass-card-neon rounded-full px-5 py-2 flex items-center gap-2">
-            <span className="text-lg">🏆</span>
-            <span className="neon-text font-bold text-sm font-mono-code tracking-wide">
-              ₹70,000+ PRIZE POOL
-            </span>
-          </div>
-          <div className="glass-card rounded-full px-5 py-2 flex items-center gap-2">
-            <span className="text-lg">🎁</span>
-            <span className="text-white/80 text-sm font-mono-code tracking-wide">
-              SWAGS & GOODIES
-            </span>
-          </div>
-        </motion.div>
-
-        {/* Main Heading */}
+{/* Main Heading */}
         <motion.div
   custom={0.8}
   variants={fadeUp}
   initial="hidden"
   animate="visible"
-  className="mb-8"
+  className="mb-3"
 >
   <Image
   src="/logo.png"
@@ -125,6 +103,31 @@ export default function Hero() {
         >
           2026
         </motion.div>
+       
+        
+        {/* Prize Banner */}
+        <motion.div
+          custom={0.5}
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          className="flex flex-wrap justify-center gap-3 mb-6"
+        >
+          <div className="glass-card-neon rounded-full px-5 py-2 flex items-center gap-2">
+            <span className="text-lg">🏆</span>
+            <span className="neon-text font-bold text-sm font-mono-code tracking-wide">
+              ₹70,000+ PRIZE POOL
+            </span>
+          </div>
+          <div className="glass-card rounded-full px-5 py-2 flex items-center gap-2">
+            <span className="text-lg">🎁</span>
+            <span className="text-white/80 text-sm font-mono-code tracking-wide">
+              SWAGS & GOODIES
+            </span>
+          </div>
+        </motion.div>
+
+        
 
         {/* Tagline */}
         <motion.p
