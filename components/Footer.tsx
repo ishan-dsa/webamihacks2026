@@ -117,9 +117,9 @@ First, pay the registration fee. Then submit the registration form along with yo
         {/* Bottom bar */}
         <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/20">
           <span> © 2026 AMIHACKS. All Rights Reserved. </span>
-         <span className="text-white/60 tracking-wide">
+        <span className="text-white/60 tracking-wide">
   Designed &amp; Developed with ❤️ by{" "}
-  <span className="font-semibold text-white/90">
+  <span className="text-white text-lg sm:text-xl font-bold tracking-wider">
     Ishan Verma
   </span>
 </span>
