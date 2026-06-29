@@ -141,8 +141,8 @@ export default function Hero() {
           className="text-white/50 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           India's premier 24-hour hackathon hosted by Amity School of Engineering & Technology,
-          welcoming students from colleges and universities across India to innovate, c
-          ollaborate and build impactful solutions.
+          welcoming students from colleges and universities across India to innovate,  
+          collaborate and build impactful solutions.
         </motion.p>
 
         {/* Buttons */}
