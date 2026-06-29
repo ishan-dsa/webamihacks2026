@@ -5,13 +5,13 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 import Countdown from "./Countdown";
 import Image from "next/image";
 
-const REGISTER_URL = "https://forms.gle/AzrVWXLTmcJjGP9R7";
+
 
 const stats = [
   { value: "24", label: "Hours" },
   { value: "₹70K+", label: "Prize Pool" },
   { value: "For All", label: "Participation" },
-  { value: "Captain + upto 3", label: "Team Members" },
+  { value: "Captain + up to 3", label: "Team Members" },
 
 ];
 
@@ -51,11 +51,11 @@ export default function Hero() {
 
          {/* Countdown */}
         <motion.div
-          custom={3.5}
+          custom={0.2}
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          className="flex flex-col items-center gap-3 mb-14"
+          className="flex flex-col items-center gap-3 mb-5"
         >
           <p className="text-white/30 text-xs font-mono-code tracking-widest uppercase">
             Hackathon Begins In
@@ -68,7 +68,7 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          className="inline-flex items-center gap-2 glass-card-neon rounded-full px-4 py-1.5 mb-8"
+          className="inline-flex items-center gap-2 glass-card-neon rounded-full px-4 py-1.5 mb-6"
         >
           <span className="w-2 h-2 rounded-full bg-neon animate-pulse-slow" />
           <span className="text-white/70 text-xs font-mono-code tracking-widest uppercase">
@@ -81,7 +81,7 @@ export default function Hero() {
   variants={fadeUp}
   initial="hidden"
   animate="visible"
-  className="mb-3"
+  className="mb-2"
 >
   <Image
   src="/logo.png"
@@ -106,26 +106,27 @@ export default function Hero() {
        
         
         {/* Prize Banner */}
-        <motion.div
-          custom={0.5}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          className="flex flex-wrap justify-center gap-3 mb-6"
-        >
-          <div className="glass-card-neon rounded-full px-5 py-2 flex items-center gap-2">
-            <span className="text-lg">🏆</span>
-            <span className="neon-text font-bold text-sm font-mono-code tracking-wide">
-              ₹70,000+ PRIZE POOL
-            </span>
-          </div>
-          <div className="glass-card rounded-full px-5 py-2 flex items-center gap-2">
-            <span className="text-lg">🎁</span>
-            <span className="text-white/80 text-sm font-mono-code tracking-wide">
-              SWAGS & GOODIES
-            </span>
-          </div>
-        </motion.div>
+<motion.div
+  custom={0.5}
+  variants={fadeUp}
+  initial="hidden"
+  animate="visible"
+  className="flex flex-wrap sm:flex-nowrap justify-center items-center gap-4 mb-6"
+>
+  <div className="glass-card-neon rounded-full px-4 py-2 flex items-center gap-2 whitespace-nowrap">
+    <span className="text-lg">🏆</span>
+    <span className="neon-text font-bold text-xs sm:text-sm font-mono-code tracking-wide">
+      ₹70,000+ PRIZE POOL
+    </span>
+  </div>
+
+  <div className="glass-card rounded-full px-4 py-2 flex items-center gap-2 whitespace-nowrap">
+    <span className="text-lg">🎁</span>
+    <span className="text-white/80 text-xs sm:text-sm font-mono-code tracking-wide">
+      SWAGS & GOODIES
+    </span>
+  </div>
+</motion.div>
 
         
 
