@@ -13,7 +13,7 @@ const navLinks = [
   { label: "FAQ", href: "#faq" },
 ];
 
-const REGISTER_URL = "https://forms.gle/AzrVWXLTmcJjGP9R7";
+
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -110,14 +110,13 @@ export default function Navbar() {
             </a>
           ))}
 
-          <a
-            href={REGISTER_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 inline-flex items-center justify-center bg-neon text-black font-semibold px-5 py-2.5 rounded-full"
-          >
-            Register Now
-          </a>
+         <a
+  href="#register"
+  onClick={() => setOpen(false)}
+  className="mt-2 inline-flex items-center justify-center bg-neon text-black font-semibold px-5 py-2.5 rounded-full"
+>
+  Register Now
+</a>
         </motion.div>
       )}
     </motion.nav>
