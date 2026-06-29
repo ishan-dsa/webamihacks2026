@@ -20,14 +20,7 @@ const prizes = [
     highlight: false,
     desc: "Cash prize + certificate + exclusive goodies",
   },
-  {
-    emoji: "🥉",
-    rank: "2nd Runner Up",
-    label: "3rd Place",
-    amount: "Merit Prize",
-    highlight: false,
-    desc: "Cash prize + certificate + recognition",
-  },
+ 
 ];
 
 const perks = [
