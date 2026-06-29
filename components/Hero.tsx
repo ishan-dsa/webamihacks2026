@@ -105,26 +105,32 @@ export default function Hero() {
         </motion.div>
        
         
-        {/* Prize Banner */}
+       {/* Prize Banner */}
 <motion.div
   custom={0.5}
   variants={fadeUp}
   initial="hidden"
   animate="visible"
-  className="flex flex-wrap sm:flex-nowrap justify-center items-center gap-4 mb-6"
+  className="mb-6"
 >
-  <div className="glass-card-neon rounded-full px-4 py-2 flex items-center gap-2 whitespace-nowrap">
-    <span className="text-lg">🏆</span>
-    <span className="neon-text font-bold text-xs sm:text-sm font-mono-code tracking-wide">
-      ₹70,000+ PRIZE POOL
-    </span>
-  </div>
+  <div className="glass-card-neon rounded-full px-6 py-3 flex flex-wrap sm:flex-nowrap items-center justify-center gap-4 shadow-[0_0_25px_rgba(239,255,0,0.12)]">
 
-  <div className="glass-card rounded-full px-4 py-2 flex items-center gap-2 whitespace-nowrap">
-    <span className="text-lg">🎁</span>
-    <span className="text-white/80 text-xs sm:text-sm font-mono-code tracking-wide">
-      SWAGS & GOODIES
-    </span>
+    <div className="flex items-center gap-2 whitespace-nowrap">
+      <span className="text-xl">🏆</span>
+      <span className="neon-text font-bold text-sm font-mono-code tracking-wide">
+        ₹70,000+ PRIZE POOL
+      </span>
+    </div>
+
+    <div className="hidden sm:block w-px h-5 bg-white/15" />
+
+    <div className="flex items-center gap-2 whitespace-nowrap">
+      <span className="text-xl">🎁</span>
+      <span className="text-white/80 font-semibold text-sm font-mono-code tracking-wide">
+        SWAGS & GOODIES
+      </span>
+    </div>
+
   </div>
 </motion.div>
 
