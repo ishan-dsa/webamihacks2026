@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -36,17 +37,27 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
         {/* Logo */}
-        <a href="#hero" className="flex items-center gap-2">
-          <span className="font-mono-code text-lg font-bold neon-text tracking-tight">
-            AMI
-          </span>
-          <span className="font-mono-code text-lg font-bold text-white tracking-tight">
-            HACKS
-          </span>
-          <span className="font-mono-code text-xs text-white/40 font-normal mt-0.5">
-            2026
-          </span>
+        <a href="#hero" className="flex items-center gap-3">
+          <Image
+            src="/logo.png"
+            alt="AMIHACKS Logo"
+            width={48}
+            height={48}
+            priority
+            className="object-contain"
+          />
+
+          <div className="flex flex-col leading-none">
+            <span className="font-mono-code text-lg font-bold neon-text">
+              AMIHACKS
+            </span>
+
+            <span className="font-mono-code text-xs text-white/60 tracking-[0.3em]">
+              2026
+            </span>
+          </div>
         </a>
 
         {/* Desktop Links */}
@@ -62,7 +73,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* CTA */}
+        {/* Register Button */}
         <a
           href={REGISTER_URL}
           target="_blank"
@@ -72,7 +83,7 @@ export default function Navbar() {
           Register Now
         </a>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Menu Button */}
         <button
           className="md:hidden text-white p-1"
           onClick={() => setOpen(!open)}
@@ -99,6 +110,7 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+
           <a
             href={REGISTER_URL}
             target="_blank"
