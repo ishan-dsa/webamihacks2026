@@ -80,7 +80,9 @@ export default function Register() {
 
     <ul className="text-white/70 text-sm space-y-2">
       <li>✓ Open to students across India</li>
-      <li>✓ Teams of 1–4 members</li>
+     <li>✓ 1 Team Captain + up to 3 Team Members</li>
+      <li>✓ ₹350 per Team (Amity Students)</li>
+<li>✓ ₹450 per Team (Other Colleges)</li>
       <li>✓ ₹70,000+ Prize Pool</li>
       <li>✓ Swags & Goodies</li>
     </ul>
