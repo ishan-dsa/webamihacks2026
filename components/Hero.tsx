@@ -28,7 +28,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden hero-grid"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
     >
       {/* Ambient glow blobs */}
       <div
