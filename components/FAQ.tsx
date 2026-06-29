@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     q: "What is the team size?",
-    a: "Each team can have 1 to 4 members. Solo participation is also allowed. Teams with at least one female member are eligible for bonus evaluation marks as per the official event policy.",
+    a: "Each team must have 1 Team Captain and can include up to 3 additional team members (maximum 4 members per team). Solo participation is also allowed. Teams with at least one female member are eligible for bonus evaluation marks as per the official event policy.",
   },
   {
     q: "How do I register?",
@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: "What is the registration fee?",
-    a: "The registration fee is displayed on the official payment portal. Please complete the payment before submitting the registration form.",
+    a: "The registration fee is ₹350 per team for Amity University Rajasthan students and ₹450 per team for participants from other colleges. Please complete the payment through the official payment portal before submitting the registration form.",
   },
   {
     q: "What do participants receive?",
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "Are food and refreshments provided?",
-    a: "Food stalls and vending machines will be available throughout the event. Refreshments can be purchased separately by participants. A DJ Night will also be organized as part of the AMIHACKS experience.",
+    a: "Self-Paid Food stalls and vending machines will be available throughout the event. Refreshments can be purchased separately by participants. A DJ Night will also be organized as part of the AMIHACKS experience.",
   },
   {
     q: "What should I bring to the hackathon?",
