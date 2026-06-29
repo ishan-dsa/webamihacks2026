@@ -114,17 +114,17 @@ First, pay the registration fee. Then submit the registration form along with yo
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/20">
-          <span> © 2026 AMIHACKS. All Rights Reserved. </span>
-        <span className="text-white/60 tracking-wide">
-  Designed &amp; Developed with ❤️ by{" "}
-  <span className="text-white text-lg sm:text-xl font-bold tracking-wider">
-    Ishan Verma
+    {/* Bottom bar */}
+<div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+
+  <span className="text-xs text-white/30">
+    © 2026 AMIHACKS. All Rights Reserved.
   </span>
-</span>
-        </div>
-      </div>
-    </footer>
-  );
-}
+
+  <div className="typing-container">
+    <span className="typing-text">
+      {'console.log("Engineered & Crafted with ❤️ by Ishan Verma");'}
+    </span>
+  </div>
+
+</div>
