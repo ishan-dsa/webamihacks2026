@@ -86,5 +86,85 @@ body {
   background: #EFFF00;
   border-radius: 2px;
 }
+/* =====================================
+   VS Code Footer Typing Effect
+===================================== */
 
+.typing-container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.typing-text{
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+
+  width:0;
+
+  font-family:"Space Mono", monospace;
+  font-size:1.15rem;
+  font-weight:600;
+
+  border-right:3px solid #EFFF00;
+
+  animation:
+    typing 4s steps(60,end) forwards,
+    blinkCursor .8s step-end 5;
+}
+
+/* VS Code inspired colors */
+
+.code-console{
+  color:#4FC1FF;
+}
+
+.code-dot{
+  color:#ffffff;
+}
+
+.code-method{
+  color:#DCDCAA;
+}
+
+.code-punc{
+  color:#ffffff;
+}
+
+.code-string{
+  color:#6A9955;
+  font-weight:700;
+}
+
+/* Typing */
+
+@keyframes typing{
+  from{
+    width:0;
+  }
+  to{
+    width:60ch;
+  }
+}
+
+@keyframes blinkCursor{
+  50%{
+    border-color:transparent;
+  }
+
+  100%{
+    border-color:transparent;
+  }
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+  .typing-text{
+    font-size:.82rem;
+  }
+
+}
 
