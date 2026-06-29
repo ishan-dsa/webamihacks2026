@@ -75,9 +75,8 @@ export default function Navbar() {
 
         {/* Register Button */}
         <a
-          href={REGISTER_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#register"
+         
           className="hidden md:inline-flex items-center gap-2 bg-neon text-black text-sm font-semibold px-5 py-2 rounded-full hover:bg-white transition-colors duration-200"
         >
           Register Now
