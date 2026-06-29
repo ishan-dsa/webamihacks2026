@@ -92,13 +92,13 @@ export default function Hero() {
   className="mb-8"
 >
   <Image
-    src="/logo.png"
-    alt="AMIHACKS Logo"
-    width={220}
-    height={220}
-    priority
-    className="mx-auto object-contain drop-shadow-[0_0_40px_rgba(239,255,0,0.35)]"
-  />
+  src="/logo.png"
+  alt="AMIHACKS Logo"
+  width={220}
+  height={220}
+  priority
+  className="mx-auto object-contain hover:scale-105 transition-all duration-300"
+/>
 </motion.div>
         <motion.h1
           custom={1}
