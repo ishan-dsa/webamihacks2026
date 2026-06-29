@@ -114,7 +114,7 @@ First, pay the registration fee. Then submit the registration form along with yo
           </div>
         </div>
 
-    {/* Bottom bar */}
+   {/* Bottom bar */}
 <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
 
   <span className="text-xs text-white/30">
@@ -123,7 +123,14 @@ First, pay the registration fee. Then submit the registration form along with yo
 
   <div className="typing-container">
     <span className="typing-text">
-      {'console.log("Engineered & Crafted with ❤️ by Ishan Verma");'}
+      <span className="code-console">console</span>
+      <span className="code-dot">.</span>
+      <span className="code-method">log</span>
+      <span className="code-punc">(</span>
+      <span className="code-string">
+        "Engineered &amp; Crafted with ❤️ by Ishan Verma"
+      </span>
+      <span className="code-punc">);</span>
     </span>
   </div>
 
