@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "|AMIHACKS 2026|",
+  title: "| AMIHACKS 2026 |",
 
   description:
     "AMIHACKS 2026 is a 24-hour national-level hackathon organized by Amity School of Engineering & Technology, Amity University Rajasthan. ₹70,000+ Prize Pool.",
