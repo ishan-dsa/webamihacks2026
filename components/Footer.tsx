@@ -94,7 +94,7 @@ export default function Footer() {
   </div>
 
 </div>
-          
+</div>          
           {/* Registration */}
           <div>
             <p className="text-white/50 text-xs font-mono-code tracking-widest uppercase mb-5">
