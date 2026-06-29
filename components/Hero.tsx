@@ -3,13 +3,14 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import Countdown from "./Countdown";
+import Image from "next/image";
 
 const REGISTER_URL = "https://forms.gle/AzrVWXLTmcJjGP9R7";
 
 const stats = [
   { value: "24", label: "Hours" },
   { value: "₹70K+", label: "Prize Pool" },
-  { value: "100+", label: "Participants" },
+  { value: "All India", label: "Participation" },
   { value: "6", label: "Tracks" },
   { value: "1–4", label: "Team Members" },
 ];
@@ -83,6 +84,22 @@ export default function Hero() {
         </motion.div>
 
         {/* Main Heading */}
+        <motion.div
+  custom={0.8}
+  variants={fadeUp}
+  initial="hidden"
+  animate="visible"
+  className="mb-8"
+>
+  <Image
+    src="/logo.png"
+    alt="AMIHACKS Logo"
+    width={220}
+    height={220}
+    priority
+    className="mx-auto object-contain drop-shadow-[0_0_40px_rgba(239,255,0,0.35)]"
+  />
+</motion.div>
         <motion.h1
           custom={1}
           variants={fadeUp}
@@ -123,9 +140,9 @@ export default function Hero() {
           animate="visible"
           className="text-white/50 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          A flagship 24-hour innovation and coding hackathon bringing together
-          developers, innovators, designers, and problem-solvers to build
-          impactful solutions.
+          India's premier 24-hour hackathon hosted by Amity School of Engineering & Technology,
+          welcoming students from colleges and universities across India to innovate, c
+          ollaborate and build impactful solutions.
         </motion.p>
 
         {/* Buttons */}
