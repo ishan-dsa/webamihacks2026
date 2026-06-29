@@ -29,8 +29,8 @@ body {
   overflow-x: hidden;
 
   background-image:
-    linear-gradient(rgba(239, 255, 0, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(239, 255, 0, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(239, 255, 0, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(239, 255, 0, 0.2) 1px, transparent 1px);
 
   background-size: 55px 55px;
   background-attachment: fixed;
