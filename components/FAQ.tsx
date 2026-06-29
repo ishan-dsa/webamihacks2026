@@ -7,28 +7,45 @@ import { Plus, Minus } from "lucide-react";
 const faqs = [
   {
     q: "Who can participate in AMIHACKS 2026?",
-    a: "AMIHACKS 2026 is open to all students enrolled at Amity University Rajasthan. Whether you are a fresher or a final-year student, you are welcome to participate.",
+    a: "AMIHACKS 2026 is open to students from colleges and universities across India. Participants must carry a valid student ID issued by their institution.",
   },
   {
     q: "What is the team size?",
-    a: "Teams can have 1 to 4 members. Each team must have one designated Team Captain who is responsible for registration and communication. Solo participation is allowed — you may also find teammates at the event.",
+    a: "Each team can have 1 to 4 members. Solo participation is also allowed. Teams with at least one female member are eligible for bonus evaluation marks as per the official event policy.",
   },
   {
-    q: "Is there a registration fee?",
-    a: "Details about registration fees will be communicated during the registration process. Check the official registration form for up-to-date information.",
+    q: "How do I register?",
+    a: "Registration is completed in two simple steps. First, pay the registration fee through the official payment portal. Then, submit the registration form along with your payment screenshot to confirm your participation.",
   },
   {
-    q: "Do participants receive certificates?",
-    a: "Yes! All participants who complete the hackathon will receive certificates of participation. Winners and special award recipients will receive additional recognition certificates.",
+    q: "What is the registration fee?",
+    a: "The registration fee is displayed on the official payment portal. Please complete the payment before submitting the registration form.",
   },
   {
-    q: "Can first-year students participate?",
-    a: "Absolutely! First-year students are encouraged to participate. AMIHACKS is a learning experience as much as a competition — everyone walks away with new skills, connections, and insights.",
+    q: "What do participants receive?",
+    a: "Participants will receive participation certificates, exciting swags and goodies, networking opportunities, mentorship, and a chance to compete for a prize pool worth ₹70,000+.",
   },
   {
-    q: "What should participants bring?",
-    a: "Bring your laptop, chargers, any hardware you plan to use for your project, and a strong problem-solving mindset. All software tools, APIs, and frameworks can be used freely. Food and refreshments will be provided throughout the event.",
+    q: "Are food and refreshments provided?",
+    a: "Food stalls and vending machines will be available throughout the event. Refreshments can be purchased separately by participants. A DJ Night will also be organized as part of the AMIHACKS experience.",
   },
+  {
+    q: "What should I bring to the hackathon?",
+    a: "Please bring your laptop, charger, valid student ID card, any hardware required for your project, and everything needed to build your solution during the hackathon.",
+  },
+  {
+    q: "Can participants use any programming language or technology?",
+    a: "Yes. Teams are free to use any programming language, framework, hardware platform, or technology stack unless a specific problem statement mentions otherwise.",
+  },
+  {
+    q: "How will projects be evaluated?",
+    a: "Projects will be evaluated by the judging panel based on innovation, technical implementation, usability, impact, presentation, and adherence to the problem statement. Additional evaluation benefits may apply as per the official event policy.",
+  },
+
+  {
+  q: "Will internet and power supply be available during the hackathon?",
+  a: "Yes. High-speed internet connectivity and uninterrupted power supply will be available throughout the event to support all participating teams."
+},
 ];
 
 function FAQItem({ q, a, i, inView }: { q: string; a: string; i: number; inView: boolean }) {
@@ -45,7 +62,7 @@ function FAQItem({ q, a, i, inView }: { q: string; a: string; i: number; inView:
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between py-5 text-left gap-6 group"
       >
-        <span className="text-white/80 group-hover:text-white text-base font-medium transition-colors">
+        <span className="text-white/90 group-hover:text-neon text-base font-medium transition-colors">
           {q}
         </span>
         <span className="flex-shrink-0 w-8 h-8 rounded-full border border-white/10 group-hover:border-neon/40 flex items-center justify-center transition-all">
@@ -65,7 +82,7 @@ function FAQItem({ q, a, i, inView }: { q: string; a: string; i: number; inView:
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <p className="text-white/45 text-sm leading-relaxed pb-5 max-w-2xl">
+            <p className="text-white/60 text-sm leading-relaxed pb-5 max-w-2xl" >
               {a}
             </p>
           </motion.div>
@@ -96,7 +113,7 @@ export default function FAQ() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-4xl sm:text-5xl font-bold text-white mb-12"
         >
-          Common <span className="neon-text">Questions</span>
+         Frequently Asked <span className="neon-text">Questions</span>
         </motion.h2>
 
         <div className="glass-card rounded-2xl px-6 sm:px-8">
@@ -104,6 +121,14 @@ export default function FAQ() {
             <FAQItem key={i} q={f.q} a={f.a} i={i} inView={inView} />
           ))}
         </div>
+        <motion.p
+  initial={{ opacity: 0 }}
+  animate={inView ? { opacity: 1 } : {}}
+  transition={{ delay: 0.5 }}
+  className="text-center text-white/40 text-sm mt-8"
+>
+  Still have questions? Reach out to the AMIHACKS organizing team through the official contact channels.
+</motion.p>
       </div>
     </section>
   );
