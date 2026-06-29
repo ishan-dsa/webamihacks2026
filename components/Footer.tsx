@@ -1,8 +1,9 @@
 "use client";
 
-import { ExternalLink } from "lucide-react";
 
-const REGISTER_URL = "https://forms.gle/AzrVWXLTmcJjGP9R7";
+import Image from "next/image";
+
+
 
 const quickLinks = [
   { label: "About", href: "#about" },
@@ -16,17 +17,22 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/6 pt-16 pb-8 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-baseline gap-1 mb-4">
-              <span className="font-mono-code text-2xl font-bold neon-text">AMI</span>
-              <span className="font-mono-code text-2xl font-bold text-white">HACKS</span>
-              <span className="font-mono-code text-sm text-white/30 ml-1">2026</span>
-            </div>
+         <div className="mb-5">
+  <a href="#hero">
+  <Image
+    src="/logo.png"
+    alt="AMIHACKS Logo"
+    width={200}
+    height={80}
+    className="object-contain"
+  />
+</a>
+</div>
             <p className="text-white/40 text-sm leading-relaxed mb-4 max-w-xs">
-              A flagship 24-hour hackathon by Amity School of Engineering &amp;
-              Technology, Amity University Rajasthan.
+              AMIHACKS 2026 is a national-level 24-hour hackathon hosted by Amity School of Engineering & Technology, Amity University Rajasthan, welcoming innovators from across India.
             </p>
             <div className="flex flex-col gap-1 text-xs text-white/25">
               <span>Amity School of Engineering &amp; Technology</span>
@@ -54,35 +60,70 @@ export default function Footer() {
             </ul>
           </div>
 
+{/* Contact */}
+<div>
+  <p className="text-white/50 text-xs font-mono-code tracking-widest uppercase mb-5">
+    Contact
+  </p>
+
+  <div className="flex flex-col gap-3 text-sm text-white/40">
+
+  <a
+    href="tel:+919667187089"
+    className="hover:text-neon transition-colors"
+  >
+    📞 +91 9667187089
+  </a>
+
+  <a
+    href="mailto:amihacks2026@gmail.com"
+    className="hover:text-neon transition-colors"
+  >
+    ✉ amihacks2026@gmail.com
+  </a>
+
+  <a
+    href="https://www.google.com/maps/search/?api=1&query=Amity+University+Rajasthan+Jaipur"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-neon transition-colors leading-relaxed"
+  >
+    📍 Amity University Rajasthan<br />
+    SP-1, Kant Kalwar,<br />
+    NH-11C, Jaipur, Rajasthan
+  </a>
+
+</div>
+</div>
+          
           {/* Registration */}
           <div>
             <p className="text-white/50 text-xs font-mono-code tracking-widest uppercase mb-5">
               Registration
             </p>
             <p className="text-white/40 text-sm mb-5 leading-relaxed">
-              Limited seats. Register now to secure your spot at AMIHACKS 2026.
-            </p>
+Complete your registration in two simple steps:
+First, pay the registration fee. Then submit the registration form along with your payment screenshot.            </p>
             <a
-              href={REGISTER_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#register"
+              
               className="inline-flex items-center gap-2 bg-neon text-black text-sm font-bold px-5 py-2.5 rounded-full hover:bg-white transition-colors"
             >
               Register Now
-              <ExternalLink size={14} />
+              
             </a>
           </div>
         </div>
 
         {/* Bottom bar */}
         <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/20">
-          <span>© 2026 AMIHACKS — Amity University Rajasthan</span>
-          <span>
-            Designed by{" "}
-            <span className="font-script text-base text-white/35 ml-0.5">
-              Ishan
-            </span>
-          </span>
+          <span> © 2026 AMIHACKS. All Rights Reserved. </span>
+         <span className="text-white/60 tracking-wide">
+  Designed &amp; Developed with ❤️ by{" "}
+  <span className="font-semibold text-white/90">
+    Ishan Verma
+  </span>
+</span>
         </div>
       </div>
     </footer>
