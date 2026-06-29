@@ -6,7 +6,7 @@ import { useRef } from "react";
 const faculty = [
   {
     name: "Dr. Bhupesh Kumar Singh",
-    role: "Faculty Coordinator",
+    role: "HOST",
     initials: "BKS",
   },
   {
