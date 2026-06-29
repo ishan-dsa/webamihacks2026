@@ -31,14 +31,8 @@ export default function Footer() {
   />
 </a>
 </div>
-            <p className="text-white/40 text-sm leading-relaxed mb-4 max-w-xs">
-              AMIHACKS 2026 is a national-level 24-hour hackathon hosted by Amity School of Engineering & Technology, Amity University Rajasthan, welcoming innovators from across India.
-            </p>
-            <div className="flex flex-col gap-1 text-xs text-white/25">
-              <span>Amity School of Engineering &amp; Technology</span>
-              <span>Amity University Rajasthan</span>
-              <span>Supported by Envent Student Council</span>
-            </div>
+           
+            
           </div>
 
           {/* Quick Links */}
@@ -88,7 +82,7 @@ export default function Footer() {
     rel="noopener noreferrer"
     className="hover:text-neon transition-colors leading-relaxed"
   >
-    📍 Amity University Rajasthan<br />
+    📍GOOGLE MAPS - Amity University Rajasthan<br />
     SP-1, Kant Kalwar,<br />
     NH-11C, Jaipur, Rajasthan
   </a>
