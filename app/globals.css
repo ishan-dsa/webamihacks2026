@@ -21,10 +21,17 @@ html {
 }
 
 body {
-  background: #000000;
+  background-color: #000;
   color: #ffffff;
   font-family: 'Space Grotesk', sans-serif;
   overflow-x: hidden;
+
+  background-image:
+    linear-gradient(rgba(239, 255, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(239, 255, 0, 0.08) 1px, transparent 1px);
+
+  background-size: 55px 55px;
+  background-attachment: fixed;
 }
 
 .font-mono-code {
@@ -78,10 +85,4 @@ body {
   border-radius: 2px;
 }
 
-/* Hero grid background */
-.hero-grid {
-  background-image: 
-    linear-gradient(rgba(239, 255, 0, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(239, 255, 0, 0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
+
