@@ -59,9 +59,7 @@ export default function About() {
 
             <p className="text-white/60 text-lg leading-relaxed mb-8">
   Participants from across India will collaborate, innovate and build
-  impactful solutions in domains such as Artificial Intelligence,
-  Cybersecurity, Web & App Development, Blockchain, IoT and Open
-  Innovation during an exciting 24-hour hackathon experience.
+  impactful solutions during an exciting 24-hour hackathon experience.
 </p>
 
             {/* Meta info */}
