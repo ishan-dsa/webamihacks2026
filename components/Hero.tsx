@@ -154,9 +154,8 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 mb-12"
         >
           <a
-            href={REGISTER_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#register"
+          
             className="group inline-flex items-center gap-2 bg-neon text-black font-bold text-base px-8 py-3.5 rounded-full hover:bg-white transition-all duration-200 shadow-[0_0_30px_rgba(239,255,0,0.3)] hover:shadow-[0_0_40px_rgba(239,255,0,0.5)]"
           >
             Register Now
