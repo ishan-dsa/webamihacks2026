@@ -100,16 +100,7 @@ export default function Hero() {
   className="mx-auto object-contain hover:scale-105 transition-all duration-300"
 />
 </motion.div>
-        <motion.h1
-          custom={1}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-none tracking-tighter mb-4"
-        >
-          <span className="neon-text neon-glow">AMI</span>
-          <span className="text-white">HACKS</span>
-        </motion.h1>
+       
 
         <motion.div
           custom={1.5}
