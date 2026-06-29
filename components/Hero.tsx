@@ -11,7 +11,7 @@ const stats = [
   { value: "24", label: "Hours" },
   { value: "₹70K+", label: "Prize Pool" },
   { value: "All India", label: "Participation" },
-  { value: "6", label: "Tracks" },
+  { value: "1 Captain + 3", label: "Team Members" },
   { value: "1–4", label: "Team Members" },
 ];
 
@@ -94,8 +94,8 @@ export default function Hero() {
   <Image
   src="/logo.png"
   alt="AMIHACKS Logo"
-  width={220}
-  height={220}
+  width={500}
+  height={300}
   priority
   className="mx-auto object-contain hover:scale-105 transition-all duration-300"
 />
@@ -105,7 +105,7 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-none tracking-tighter mb-4"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-none tracking-tighter mb-4"
         >
           <span className="neon-text neon-glow">AMI</span>
           <span className="text-white">HACKS</span>
