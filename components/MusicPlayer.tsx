@@ -14,7 +14,7 @@ export default function MusicPlayer() {
 
       hasStarted.current = true;
 
-      audioRef.current.volume = 0.15;
+      audioRef.current.volume = 0.05;
 
       try {
         await audioRef.current.play();
