@@ -118,24 +118,30 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+       {/* Bottom Bar */}
+<div className="border-t border-white/5 pt-8 relative">
 
-          <span className="text-xs text-white/30">
-            © 2026 AMIHACKS. All Rights Reserved.
-          </span>
+  {/* Copyright */}
+  <div className="text-center sm:text-left">
+    <span className="text-xs text-white/30">
+      © 2026 AMIHACKS. All Rights Reserved.
+    </span>
+  </div>
 
-         <span className="flex flex-col items-center text-center">
-  <span className="text-white/60 text-base sm:text-lg font-medium tracking-wide">
-    Engineered &amp; Crafted with ❤️
-  </span>
+  {/* Credits */}
+  <div className="mt-6 sm:mt-0 sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:top-1/2 sm:-translate-y-1/2">
+    <span className="flex flex-col items-center text-center">
+      <span className="text-white/60 text-base sm:text-lg font-medium tracking-wide">
+        Engineered &amp; Crafted with ❤️ By-
+      </span>
 
-  <span className="text-neon text-xl sm:text-2xl font-bold mt-1">
-    Ishan Verma
-  </span>
-</span>
+      <span className="font-script text-neon text-2xl sm:text-3xl mt-1 neon-glow">
+        Ishan Verma
+      </span>
+    </span>
+  </div>
 
-        </div>
+</div>
 
       </div>
     </footer>
