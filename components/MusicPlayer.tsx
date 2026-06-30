@@ -14,7 +14,7 @@ export default function MusicPlayer() {
 
       hasStarted.current = true;
 
-      audioRef.current.volume = 0.05;
+      audioRef.current.volume = 0.10;
 
       try {
         await audioRef.current.play();
@@ -39,7 +39,7 @@ export default function MusicPlayer() {
 
     if (audio.paused) {
       try {
-        audio.volume = 0.05;
+        audio.volume = 0.10;
         await audio.play();
         setPlaying(true);
       } catch (err) {
