@@ -125,12 +125,15 @@ export default function Footer() {
             © 2026 AMIHACKS. All Rights Reserved.
           </span>
 
-          <span className="text-white/60 text-base sm:text-lg font-medium tracking-wide text-center">
-            Engineered &amp; Crafted with ❤️ by{" "}
-            <span className="text-neon text-xl sm:text-2xl font-bold">
-              Ishan Verma
-            </span>
-          </span>
+         <span className="flex flex-col items-center text-center">
+  <span className="text-white/60 text-base sm:text-lg font-medium tracking-wide">
+    Engineered &amp; Crafted with ❤️
+  </span>
+
+  <span className="text-neon text-xl sm:text-2xl font-bold mt-1">
+    Ishan Verma
+  </span>
+</span>
 
         </div>
 
