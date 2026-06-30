@@ -1,4 +1,5 @@
 import MusicPlayer from "@/components/MusicPlayer";
+import CursorEffects from "@/components/CursorEffects";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -58,8 +59,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-   <html lang="en">
+  <html lang="en">
   <body>
+    <CursorEffects />
     <MusicPlayer />
     {children}
   </body>
