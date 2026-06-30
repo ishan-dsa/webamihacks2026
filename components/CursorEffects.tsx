@@ -31,9 +31,8 @@ export default function CursorEffects() {
     let currentY = 0;
 
     const animate = () => {
-      currentX += (mouseX - currentX) * 0.18;
-      currentY += (mouseY - currentY) * 0.18;
-
+     currentX += (mouseX - currentX) * 0.6;
+currentY += (mouseY - currentY) * 0.6;
       cursor.style.left = `${currentX}px`;
       cursor.style.top = `${currentY}px`;
 
