@@ -4,130 +4,124 @@ import { useEffect } from "react";
 
 export default function CursorEffects() {
   useEffect(() => {
-    // Hide default cursor
-    document.body.style.cursor = "none";
-
-    // Cursor
     const cursor = document.createElement("div");
+
     cursor.style.cssText = `
-      position:fixed;
-      width:18px;
-      height:18px;
-      border:2px solid #FFD700;
-      border-radius:50%;
-      pointer-events:none;
-      transform:translate(-50%,-50%);
-      z-index:999999;
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #EFFF00;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 999999;
+      box-shadow: 0 0 20px rgba(239,255,0,.8);
       transition:
         width .2s ease,
         height .2s ease,
-        border .2s ease,
         background .2s ease,
-        transform .08s linear;
-      box-shadow:0 0 20px rgba(255,215,0,.8);
+        border .2s ease;
     `;
 
     document.body.appendChild(cursor);
 
-    // Move Cursor
-    const move = (e: MouseEvent) => {
-      cursor.style.left = `${e.clientX}px`;
-      cursor.style.top = `${e.clientY}px`;
+    let mouseX = 0;
+    let mouseY = 0;
+    let currentX = 0;
+    let currentY = 0;
 
-      // Trail
-      const dot = document.createElement("div");
+    const animate = () => {
+      currentX += (mouseX - currentX) * 0.18;
+      currentY += (mouseY - currentY) * 0.18;
 
-      dot.style.cssText = `
-        position:fixed;
-        left:${e.clientX}px;
-        top:${e.clientY}px;
-        width:8px;
-        height:8px;
-        background:#FFD700;
-        border-radius:50%;
-        pointer-events:none;
-        transform:translate(-50%,-50%);
-        z-index:999998;
-        box-shadow:0 0 15px rgba(255,215,0,.9);
-        transition:all .45s ease-out;
-      `;
+      cursor.style.left = `${currentX}px`;
+      cursor.style.top = `${currentY}px`;
 
-      document.body.appendChild(dot);
-
-      requestAnimationFrame(() => {
-        dot.style.opacity = "0";
-        dot.style.transform = "translate(-50%,-50%) scale(3)";
-      });
-
-      setTimeout(() => dot.remove(), 450);
+      requestAnimationFrame(animate);
     };
 
-    // Ripple
+    animate();
+
+    const move = (e: MouseEvent) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    };
+
     const click = (e: MouseEvent) => {
       const ripple = document.createElement("div");
 
       ripple.style.cssText = `
-        position:fixed;
-        left:${e.clientX}px;
-        top:${e.clientY}px;
-        width:20px;
-        height:20px;
-        border:2px solid #FFD700;
-        border-radius:50%;
-        transform:translate(-50%,-50%);
-        pointer-events:none;
-        z-index:999998;
-        box-shadow:0 0 20px rgba(255,215,0,.8);
-        transition:all .6s ease-out;
+        position: fixed;
+        left: ${e.clientX}px;
+        top: ${e.clientY}px;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #EFFF00;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 999998;
+        box-shadow: 0 0 20px rgba(239,255,0,.8);
+        animation: ripple .6s ease-out forwards;
       `;
 
       document.body.appendChild(ripple);
 
-      requestAnimationFrame(() => {
-        ripple.style.width = "140px";
-        ripple.style.height = "140px";
-        ripple.style.opacity = "0";
-      });
-
       setTimeout(() => ripple.remove(), 600);
     };
 
-    // Hover Effects
     const hover = () => {
       cursor.style.width = "36px";
       cursor.style.height = "36px";
-      cursor.style.background = "rgba(255,215,0,.2)";
+      cursor.style.background = "rgba(239,255,0,.15)";
     };
 
     const leave = () => {
-      cursor.style.width = "18px";
-      cursor.style.height = "18px";
+      cursor.style.width = "20px";
+      cursor.style.height = "20px";
       cursor.style.background = "transparent";
     };
+
+    const style = document.createElement("style");
+    style.innerHTML = `
+      @keyframes ripple {
+        from {
+          width:20px;
+          height:20px;
+          opacity:1;
+        }
+        to {
+          width:140px;
+          height:140px;
+          opacity:0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
 
     document.addEventListener("mousemove", move);
     document.addEventListener("click", click);
 
-    const clickable = document.querySelectorAll(
-      "a,button,input,textarea,select,[role='button']"
+    const clickables = document.querySelectorAll(
+      "a, button, input, textarea, select, [role='button']"
     );
 
-    clickable.forEach((el) => {
+    clickables.forEach((el) => {
       el.addEventListener("mouseenter", hover);
       el.addEventListener("mouseleave", leave);
     });
 
     return () => {
-      document.body.style.cursor = "default";
-      cursor.remove();
-
       document.removeEventListener("mousemove", move);
       document.removeEventListener("click", click);
 
-      clickable.forEach((el) => {
+      clickables.forEach((el) => {
         el.removeEventListener("mouseenter", hover);
         el.removeEventListener("mouseleave", leave);
       });
+
+      cursor.remove();
+      style.remove();
     };
   }, []);
 
