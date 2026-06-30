@@ -61,16 +61,39 @@ export default function MusicPlayer() {
           e.stopPropagation();
           toggleMusic();
         }}
-        className="fixed top-6 right-6 z-[9999] h-14 w-14 rounded-full
-        bg-black/60 backdrop-blur-md border border-yellow-400
-        flex items-center justify-center
-        hover:scale-110 transition-all duration-300
-        shadow-[0_0_20px_rgba(255,255,0,0.5)]"
+        aria-label={playing ? "Mute music" : "Play music"}
+        title={playing ? "Mute Music" : "Play Music"}
+        className="
+          fixed
+          bottom-8
+          right-8
+          z-[9999]
+          h-16
+          w-16
+          rounded-full
+          bg-gradient-to-br
+          from-yellow-300
+          via-yellow-400
+          to-yellow-500
+          text-black
+          border
+          border-yellow-200/80
+          backdrop-blur-xl
+          flex
+          items-center
+          justify-center
+          shadow-[0_0_40px_rgba(255,255,0,0.8)]
+          transition-all
+          duration-500
+          hover:scale-110
+          hover:rotate-180
+          active:scale-95
+        "
       >
         {playing ? (
-          <Volume2 className="text-yellow-300" size={24} />
+          <Volume2 size={28} className="drop-shadow-lg" />
         ) : (
-          <VolumeX className="text-white" size={24} />
+          <VolumeX size={28} className="drop-shadow-lg" />
         )}
       </button>
     </>
