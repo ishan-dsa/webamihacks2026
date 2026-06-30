@@ -66,7 +66,7 @@ export default function MusicPlayer() {
         title={playing ? "Mute Music" : "Play Music"}
         className="
           fixed
-          bottom-22
+          bottom-20
           right-8
           z-[9999]
           h-16
