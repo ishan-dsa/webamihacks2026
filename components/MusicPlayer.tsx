@@ -39,6 +39,7 @@ export default function MusicPlayer() {
 
     if (audio.paused) {
       try {
+        audio.volume = 0.05;
         await audio.play();
         setPlaying(true);
       } catch (err) {
