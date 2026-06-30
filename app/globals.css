@@ -2,15 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Dancing+Script:wght@600&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Dancing+Script:wght@600&display=swap");
 
 :root {
-  --neon: #EFFF00;
+  --neon: #efff00;
   --neon-dim: rgba(239, 255, 0, 0.15);
   --neon-glow: rgba(239, 255, 0, 0.4);
 }
-
 
 * {
   box-sizing: border-box;
@@ -20,13 +18,17 @@
 
 html {
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 body {
   background-color: #000;
   color: #ffffff;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   overflow-x: hidden;
+  cursor: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   background-image:
     linear-gradient(rgba(239, 255, 0, 0.2) 1px, transparent 1px),
@@ -36,20 +38,35 @@ body {
   background-attachment: fixed;
 }
 
+/* Hide system cursor on interactive elements */
+a,
+button,
+input,
+textarea,
+select,
+label,
+summary,
+img,
+[role="button"] {
+  cursor: none;
+}
+
 .font-mono-code {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
 }
 
 .font-script {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
 }
 
 .neon-text {
-  color: #EFFF00;
+  color: #efff00;
 }
 
 .neon-glow {
-  text-shadow: 0 0 20px rgba(239, 255, 0, 0.6), 0 0 40px rgba(239, 255, 0, 0.3);
+  text-shadow:
+    0 0 20px rgba(239, 255, 0, 0.6),
+    0 0 40px rgba(239, 255, 0, 0.3);
 }
 
 .neon-border {
@@ -69,7 +86,12 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #EFFF00 0%, #ffffff 50%, #EFFF00 100%);
+  background: linear-gradient(
+    135deg,
+    #efff00 0%,
+    #ffffff 50%,
+    #efff00 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -79,10 +101,29 @@ body {
 ::-webkit-scrollbar {
   width: 4px;
 }
+
 ::-webkit-scrollbar-track {
   background: #000;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #EFFF00;
+  background: #efff00;
   border-radius: 2px;
+}
+
+/* Show normal cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  html,
+  body,
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  label,
+  summary,
+  img,
+  [role="button"] {
+    cursor: auto;
+  }
 }
