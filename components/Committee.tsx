@@ -1,23 +1,44 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const faculty = [
   {
+    name: "Dr. Ashok K. Chauhan",
+    role: "Founder President, Amity Group",
+    image: "/committee/ashok.jpg",
+  },
+  {
+    name: "Dr. Asim Chauhan",
+    role: "Chancellor",
+    image: "/committee/asim.jpg",
+  },
+  {
+    name: "Prof. (Dr.) Amit Jain",
+    role: "Vice Chancellor, Amity University Rajasthan",
+    image: "/committee/amit.jpg",
+  },
+  {
+    name: "Prof. (Dr.) G. K. Aseri",
+    role: "Pro Vice Chancellor, Amity University Rajasthan",
+    image: "/committee/aseri.jpg",
+  },
+  {
     name: "Dr. Bhupesh Kumar Singh",
-    role: "HOST",
-    initials: "BKS",
+    role: "Host",
+    image: "/committee/bhupesh.jpg",
   },
   {
     name: "Dr. Sunil Pathak",
     role: "Faculty Coordinator",
-    initials: "SP",
+    image: "/committee/sunil.jpg",
   },
   {
     name: "Dr. Jyoti Khandelwal",
     role: "Faculty Coordinator",
-    initials: "JK",
+    image: "/committee/jyoti.jpg",
   },
 ];
 
@@ -36,6 +57,7 @@ export default function Committee() {
         >
           Organizing Committee
         </motion.p>
+
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -46,24 +68,34 @@ export default function Committee() {
         </motion.h2>
 
         {/* Faculty Cards */}
-        <div className="grid sm:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {faculty.map((f, i) => (
             <motion.div
               key={f.name}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
+              transition={{ duration: 0.5, delay: 0.15 + i * 0.08 }}
               whileHover={{ y: -6, transition: { duration: 0.2 } }}
               className="glass-card rounded-2xl p-8 text-center hover:border-white/12 transition-all"
             >
-              {/* Avatar */}
-              <div className="w-20 h-20 rounded-full bg-neon/10 border border-neon/20 flex items-center justify-center mx-auto mb-5">
-                <span className="font-mono-code text-neon font-bold text-lg">
-                  {f.initials}
-                </span>
+              {/* Photo */}
+              <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-neon/20 mx-auto mb-5">
+                <Image
+                  src={f.image}
+                  alt={f.name}
+                  width={96}
+                  height={96}
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-white font-semibold text-lg mb-1">{f.name}</h3>
-              <p className="text-white/40 text-sm font-mono-code">{f.role}</p>
+
+              <h3 className="text-white font-semibold text-lg mb-2">
+                {f.name}
+              </h3>
+
+              <p className="text-white/40 text-sm font-mono-code">
+                {f.role}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -98,10 +130,12 @@ export default function Committee() {
             >
               <div className="flex items-center gap-3 mb-2">
                 <span className="text-xl">{item.icon}</span>
+
                 <span className="text-white/35 text-xs font-mono-code uppercase tracking-widest">
                   {item.label}
                 </span>
               </div>
+
               <p className="text-white font-semibold text-sm leading-snug">
                 {item.value}
               </p>
