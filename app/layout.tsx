@@ -1,4 +1,3 @@
-import { ThemeProvider } from "@/components/ThemeProvider";
 import MusicPlayer from "@/components/MusicPlayer";
 import CursorEffects from "@/components/CursorEffects";
 import type { Metadata } from "next";
@@ -60,13 +59,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body>
-        <ThemeProvider>
-          <CursorEffects />
-          <MusicPlayer />
-          {children}
-        </ThemeProvider>
+        <CursorEffects />
+        <MusicPlayer />
+        {children}
       </body>
     </html>
   );
