@@ -77,20 +77,30 @@ export default function Hero() {
         </motion.div>
 {/* Main Heading */}
         <motion.div
-  custom={0.8}
-  variants={fadeUp}
-  initial="hidden"
-  animate="visible"
-  className="mb-2"
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.7 }}
+  className="flex items-center justify-center gap-8 mb-8"
 >
+<div className="flex items-center justify-center gap-6 mb-8">
   <Image
-  src="/logo.png"
-  alt="AMIHACKS Logo"
-  width={500}
-  height={300}
-  priority
-  className="mx-auto object-contain hover:scale-105 transition-all duration-300"
-/>
+    src="/logo.png"
+    alt="AMIHACKS Logo"
+    width={140}
+    height={140}
+    priority
+    className="object-contain"
+  />
+
+  <Image
+    src="/amity-logo.png"
+    alt="Amity University Rajasthan"
+    width={140}
+    height={140}
+    priority
+    className="object-contain"
+  />
+</div>
 </motion.div>
        
 
