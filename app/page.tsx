@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import HostInstitution from "@/components/HostInstitution";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import WhyParticipate from "@/components/WhyParticipate";
@@ -16,6 +17,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <HostInstitution />
       <WhyParticipate />
       <Tracks />
       <Timeline />
