@@ -12,7 +12,7 @@ const faculty = [
   },
   {
     name: "Dr. Asim Chauhan",
-    role: "Chancellor",
+    role: "Chancellor Amity University",
     image: "/committee/asim.jpg",
   },
   {
@@ -79,15 +79,15 @@ export default function Committee() {
               className="glass-card rounded-2xl p-8 text-center hover:border-white/12 transition-all"
             >
               {/* Photo */}
-              <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-neon/20 mx-auto mb-5">
-                <Image
-                  src={f.image}
-                  alt={f.name}
-                  width={96}
-                  height={96}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+             <div className="w-36 h-36 rounded-full overflow-hidden border-2 border-neon/20 mx-auto mb-5">
+  <Image
+    src={f.image}
+    alt={f.name}
+    width={144}
+    height={144}
+    className="w-full h-full object-cover"
+  />
+</div>
 
               <h3 className="text-white font-semibold text-lg mb-2">
                 {f.name}
