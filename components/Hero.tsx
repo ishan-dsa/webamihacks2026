@@ -63,7 +63,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 pt-20 pb-20 text-center flex flex-col items-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 pt-36 sm:pt-40 pb-20 text-center flex flex-col items-center">
 
         {/* Countdown */}
         <motion.div
@@ -90,7 +90,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-6 bg-white/[0.03] border border-cyan-500/20 backdrop-blur-sm"
         >
           <span className="w-2 h-2 rounded-full bg-[#efff00] animate-pulse shadow-[0_0_8px_2px_rgba(239,255,0,0.6)]" />
-          <span className="text-slate-300 text-xs font-mono-code tracking-widest uppercase">
+          <span className="text-white text-xs font-mono-code tracking-widest uppercase">
             24th–25th September 2026 · Jaipur
           </span>
         </motion.div>
@@ -156,7 +156,7 @@ export default function Hero() {
             </span>
             <div className="w-px h-4 bg-white/20" />
             <span className="text-base sm:text-lg">🎁</span>
-            <span className="text-slate-300 font-semibold text-[11px] sm:text-sm font-mono-code tracking-wide">
+            <span className="text-white font-semibold text-[11px] sm:text-sm font-mono-code tracking-wide">
               SWAGS & GOODIES
             </span>
           </div>
@@ -180,7 +180,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.8 }}
-          className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed text-justify"
+          className="text-white font-medium text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed text-justify drop-shadow-[0_0_8px_rgba(255,255,255,0.25)]"
         >
           {"India's premier 24-hour hackathon hosted by Amity School of Engineering & Technology, welcoming students from colleges and universities across India to innovate, collaborate and build impactful solutions."
             .split(" ")
@@ -233,7 +233,7 @@ export default function Hero() {
               <span className="text-2xl sm:text-3xl font-bold text-cyan-400 font-mono-code drop-shadow-[0_0_10px_rgba(56,189,248,0.4)]">
                 {s.value}
               </span>
-              <span className="text-slate-400 text-xs tracking-wider mt-0.5 uppercase">
+              <span className="text-white text-xs tracking-wider mt-0.5 uppercase">
                 {s.label}
               </span>
             </div>
