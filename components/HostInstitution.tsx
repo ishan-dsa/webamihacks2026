@@ -35,10 +35,9 @@ export default function HostInstitution() {
   />
 </div>
 
-<p className="text-white/70 max-w-3xl mx-auto">
- Amity School of Engineering & Technology | Amity University Rajasthan.
+<p className="max-w-3xl mx-auto text-slate-600">
+  Amity School of Engineering & Technology | Amity University Rajasthan.
 </p>
-
 
 
 
@@ -53,11 +52,11 @@ export default function HostInstitution() {
         whileHover={{ y: -5 }}
         className="glass-card rounded-3xl p-8 mb-8"
       >
-        <h3 className="text-3xl font-bold neon-text mb-4">
-          About Amity University Rajasthan
-        </h3>
+        <h3 className="text-3xl font-bold text-slate-900 mb-4">
+  About Amity University Rajasthan
+</h3>
 
-        <p className="text-white/70 leading-8">
+        <p className="text-slate-600 leading-8 text-justify">
           Established in 2008, Amity University Rajasthan is a premier
           multidisciplinary university known for academic excellence,
           innovation, research, and global exposure.
@@ -72,7 +71,7 @@ export default function HostInstitution() {
               transition={{ duration: 0.4 }}
               className="overflow-hidden"
             >
-              <p className="text-white/70 leading-8 mt-5">
+              <p className="text-slate-600 leading-8 mt-5 text-justify">
                 Spread across a modern campus in Jaipur, the university
                 offers undergraduate, postgraduate and doctoral
                 programmes across Engineering, Management, Law,
@@ -88,7 +87,7 @@ export default function HostInstitution() {
 
         <button
           onClick={() => setShowUniversity(!showUniversity)}
-          className="mt-6 text-neon font-semibold hover:underline"
+          className="mt-6 text-blue-700 font-semibold hover:underline"
         >
           {showUniversity ? "Show Less ↑" : "See More →"}
         </button>
@@ -100,11 +99,11 @@ export default function HostInstitution() {
         whileHover={{ y: -5 }}
         className="glass-card rounded-3xl p-8"
       >
-        <h3 className="text-3xl font-bold neon-text mb-4">
+        <h3 className="text-3xl font-bold text-slate-900 mb-4">
           About Amity School of Engineering & Technology
         </h3>
 
-        <p className="text-white/70 leading-8">
+        <p className="text-slate-600 leading-8 text-justify">
           The Amity School of Engineering & Technology (ASET) is the
           flagship engineering school of Amity University Rajasthan,
           dedicated to excellence in engineering education and innovation.
@@ -119,7 +118,7 @@ export default function HostInstitution() {
               transition={{ duration: 0.4 }}
               className="overflow-hidden"
             >
-              <p className="text-white/70 leading-8 mt-5">
+              <p className="text-slate-600 leading-8 mt-5 text-justify">
                 ASET offers cutting-edge programmes in Computer Science,
                 Artificial Intelligence, Cyber Security, Electronics,
                 Mechanical, Civil and allied engineering disciplines.
@@ -134,7 +133,7 @@ export default function HostInstitution() {
 
         <button
           onClick={() => setShowASET(!showASET)}
-          className="mt-6 text-neon font-semibold hover:underline"
+          className="mt-6 text-blue-700 font-semibold hover:underline"
         >
           {showASET ? "Show Less ↑" : "See More →"}
         </button>
