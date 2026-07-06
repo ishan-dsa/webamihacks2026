@@ -84,7 +84,7 @@ export default function Committee() {
           transition={{ duration: 0.5 }}
           className="text-cyan-400/70 font-mono-code text-xs tracking-[0.3em] uppercase mb-4"
         >
-          &lt;/&gt; Organizing Committee
+         
         </motion.p>
 
         <motion.h2
