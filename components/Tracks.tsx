@@ -162,7 +162,6 @@ export default function Tracks() {
           transition={{ duration: 0.5 }}
           className="text-neon font-mono-code text-xs tracking-[0.3em] uppercase mb-4"
         >
-          &lt;/&gt; Innovation Theme
         </motion.p>
 
         {/* Heading */}
