@@ -77,9 +77,14 @@ export default function Committee() {
             transition={{ duration: 0.5 }}
             className="glass-card rounded-3xl p-12 text-center mb-16 border border-neon/10 max-w-3xl mx-auto"
           >
-            <div className="w-24 h-24 rounded-full bg-neon/10 border border-neon/30 flex items-center justify-center text-5xl mx-auto mb-6">
-              👥
-            </div>
+           <Image
+  src="/committee.png"
+  alt="Organising Committee"
+  width={300}
+  height={300}
+  priority
+  className="mx-auto mb-8 w-56 sm:w-64 md:w-72 lg:w-80 h-auto object-contain hover:scale-105 transition-all duration-300"
+ />
 
           
 
