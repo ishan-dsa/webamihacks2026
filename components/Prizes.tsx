@@ -96,7 +96,7 @@ export default function Prizes() {
           transition={{ duration: 0.5 }}
           className="text-cyan-400/70 font-mono-code text-xs tracking-[0.3em] uppercase mb-4"
         >
-          &lt;/&gt; Rewards
+         
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
