@@ -9,7 +9,7 @@ const faculty = [
     name: "Dr. Ashok K. Chauhan",
     role: "Founder President, Amity Group",
     image: "/committee/ashok.jpg",
-     imageClass: "object-top",
+  imageClass: "object-[50%_15%]",
   },
   {
     name: "Dr. Asim Chauhan",
@@ -119,8 +119,8 @@ className="px-6 py-2.5 rounded-full bg-neon text-black font-semibold shadow-[0_0
                   whileHover={{ y: -8, scale: 1.03 }}
                   className="glass-card rounded-2xl p-10 text-center hover:border-neon/30 transition-all"
                 >
-                  <div className="w-36 h-36 rounded-full overflow-hidden border-2 border-neon/20 mx-auto mb-5">
-                    <Image
+<div className="w-40 h-40 rounded-full overflow-hidden border-2 border-neon/20 mx-auto mb-5">         
+  <Image
   src={f.image}
   alt={f.name}
   width={144}
