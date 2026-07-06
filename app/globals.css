@@ -120,7 +120,11 @@ img,
     background-color: #1d4ed8;
   }
 }
+/* globals.css */
 
+* {
+  font-family: 'Times New Roman', Times, serif !important;
+}
 
 
 
