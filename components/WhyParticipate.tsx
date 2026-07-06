@@ -97,7 +97,7 @@ export default function WhyParticipate() {
           transition={{ duration: 0.5 }}
           className="text-neon font-mono-code text-xs tracking-[0.3em] uppercase mb-4"
         >
-          &lt;/&gt; Why Participate
+         
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
