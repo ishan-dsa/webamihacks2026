@@ -6,42 +6,49 @@ const events = [
     phase: "01",
     title: "Registration Opens",
     desc: "Teams register via the official form. One team captain + up to 3 members.",
+    tag: "Now Open",
     active: true,
   },
   {
     phase: "02",
     title: "Team Formation",
     desc: "Finalize your team composition. Solo participants welcome — find teammates at the event.",
+    tag: "Pre-Event",
     active: false,
   },
   {
     phase: "03",
     title: "Hackathon Kickoff",
     desc: "Opening ceremony, problem statements revealed, and the 24-hour clock begins.",
+    tag: "24 Sep · 09:00 AM",
     active: false,
   },
   {
     phase: "04",
     title: "Mentoring Sessions",
     desc: "Industry mentors rotate through teams — ask questions, get direction, unblock.",
+    tag: "Throughout",
     active: false,
   },
   {
     phase: "05",
     title: "Project Development",
     desc: "Build, iterate, and ship. Code reviews, workshops, and midnight surprises await.",
+    tag: "24–25 Sep",
     active: false,
   },
   {
     phase: "06",
     title: "Final Evaluation",
     desc: "Present your project to a jury panel. Judged on innovation, impact, and execution.",
+    tag: "25 Sep · AM",
     active: false,
   },
   {
     phase: "07",
     title: "Winner Announcement",
     desc: "Awards, recognition, and the celebration of what 24 hours of focused building can create.",
+    tag: "25 Sep · PM",
     active: false,
   },
 ];
@@ -126,10 +133,20 @@ export default function Timeline() {
                   className={`flex-1 pb-10 border-l-2 sm:border-l-0 pl-6 sm:pl-0 transition-all
                   ${e.active ? "border-neon/60" : "border-white/8"}`}
                 >
-                  <div className="flex flex-wrap items-center gap-3 mb-2 mt-3 sm:mt-4">
+                  <div className="flex flex-wrap items-center gap-3 mb-3 mt-3 sm:mt-4">
                     <h3 className="text-white font-semibold text-lg">{e.title}</h3>
+                    <span
+                      className={`text-sm sm:text-base font-mono-code font-bold px-4 py-1.5 rounded-full
+                      ${
+                        e.active
+                          ? "bg-neon/15 text-neon border border-neon/30"
+                          : "bg-white/5 text-white/70 border border-white/15"
+                      }`}
+                    >
+                      {e.tag}
+                    </span>
                   </div>
-                  <p className="text-white/40 text-sm leading-relaxed max-w-lg">
+                  <p className="text-white font-medium text-base sm:text-lg leading-relaxed max-w-lg drop-shadow-[0_0_10px_rgba(255,255,255,0.25)]">
                     {e.desc}
                   </p>
                 </div>
