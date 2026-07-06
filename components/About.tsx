@@ -123,7 +123,7 @@ export default function About() {
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
                   whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                  className="rounded-2xl p-6 bg-white/[0.03] border border-cyan-500/15 backdrop-blur-sm hover:border-cyan-400/40 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)] transition-all"
+                  className="rounded-2xl p-6 bg-white/[0.03] border border-cyan-500/15 backdrop-blur-sm hover:border-cyan-400/40 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)] transition-all flex flex-col items-center text-center"
                 >
                   <div className="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-4">
                     <Icon size={20} className="text-cyan-400" />
@@ -139,7 +139,7 @@ export default function About() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.7 }}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="col-span-2 rounded-2xl p-6 flex items-center gap-4 bg-gradient-to-r from-cyan-500/[0.06] to-purple-500/[0.06] border border-cyan-500/15 backdrop-blur-sm hover:border-cyan-400/40 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)] transition-all"
+              className="col-span-2 rounded-2xl p-6 flex flex-col items-center text-center gap-2 bg-gradient-to-r from-cyan-500/[0.06] to-purple-500/[0.06] border border-cyan-500/15 backdrop-blur-sm hover:border-cyan-400/40 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)] transition-all"
             >
               <span className="text-3xl">🚀</span>
               <div>
