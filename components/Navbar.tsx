@@ -29,13 +29,12 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled
-  ? "bg-white/90 backdrop-blur-xl border-b border-blue-200 shadow-sm"
-  : "bg-transparent"
+        scrolled
+          ? "bg-[#05070f]/90 backdrop-blur-xl border-b border-cyan-500/20 shadow-[0_0_25px_rgba(56,189,248,0.08)]"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-3">
           <Image
@@ -46,13 +45,10 @@ export default function Navbar() {
             priority
             className="object-contain"
           />
-
           <div className="flex flex-col leading-none">
-            <span className="font-mono-code text-lg font-bold text-blue-700">
+            <span className="font-mono-code text-lg font-bold text-cyan-400 drop-shadow-[0_0_10px_rgba(56,189,248,0.4)]">
               AMIHACKS
             </span>
-
-            
           </div>
         </a>
 
@@ -62,7 +58,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="text-slate-600 hover:text-blue-700 text-sm font-medium transition-colors duration-200"
+              className="text-slate-300 hover:text-cyan-400 text-sm font-medium transition-colors duration-200"
             >
               {link.label}
             </a>
@@ -72,14 +68,14 @@ export default function Navbar() {
         {/* Register Button */}
         <a
           href="#register"
-          className="hidden md:inline-flex items-center gap-2 bg-blue-700 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-blue-800 transition-all duration-200 shadow-md"
+          className="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold px-5 py-2 rounded-full hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 shadow-[0_0_20px_rgba(56,189,248,0.35)]"
         >
           Register Now
         </a>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-slate-800 p-1"
+          className="md:hidden text-slate-200 p-1"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -92,23 +88,22 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-white/95 backdrop-blur-xl border-t border-blue-200 px-6 py-6 flex flex-col gap-4 shadow-lg"
+          className="md:hidden bg-[#05070f]/95 backdrop-blur-xl border-t border-cyan-500/20 px-6 py-6 flex flex-col gap-4 shadow-[0_10px_30px_rgba(0,0,0,0.4)]"
         >
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="text-slate-700 hover:text-blue-700 text-base font-medium transition-colors"
+              className="text-slate-300 hover:text-cyan-400 text-base font-medium transition-colors"
             >
               {link.label}
             </a>
           ))}
-
           <a
             href="#register"
             onClick={() => setOpen(false)}
-            className="mt-2 inline-flex items-center justify-center bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-full hover:bg-blue-800 transition-all"
+            className="mt-2 inline-flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold px-5 py-2.5 rounded-full hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 shadow-[0_0_20px_rgba(56,189,248,0.35)]"
           >
             Register Now
           </a>
