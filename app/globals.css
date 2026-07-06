@@ -124,12 +124,3 @@ img,
 
 
 
-/* Force all paragraph/body text to bright white, leave headings untouched */
-p, span, li, a {
-  color: #ffffff !important;
-}
-
-/* Keep headings as-is (cyan accents, white base) */
-h1, h2, h3, h4, h5, h6 {
-  color: inherit;
-}
