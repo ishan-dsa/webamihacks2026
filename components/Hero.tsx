@@ -85,18 +85,6 @@ export default function Hero() {
   className="mb-8"
 >
   <div className="flex items-center justify-center gap-6 sm:gap-10">
-    {/* Amity Logo */}
-<Image
-  src="/amity-logo.jpg"
-  alt="Amity University Rajasthan"
-  width={180}
-  height={180}
-  priority
-  className="h-20 sm:h-28 md:h-36 w-auto object-contain hover:scale-105 transition-all duration-300"
-/>
-
-{/* Glowing Divider */}
-<div className="hidden sm:block w-px h-20 bg-neon/50 shadow-[0_0_15px_rgba(239,255,0,0.8)]" />
 
 {/* AMIHACKS Logo */}
 <Image
@@ -107,6 +95,26 @@ export default function Hero() {
   priority
   className="h-24 sm:h-32 md:h-40 w-auto object-contain hover:scale-105 transition-all duration-300"
 />
+
+
+{/* Glowing Divider */}
+<div className="hidden sm:block w-px h-20 bg-neon/50 shadow-[0_0_15px_rgba(239,255,0,0.8)]" />
+
+
+
+    
+    {/* Amity Logo */}
+<Image
+  src="/amity-logo.jpg"
+  alt="Amity University Rajasthan"
+  width={180}
+  height={180}
+  priority
+  className="h-20 sm:h-28 md:h-36 w-auto object-contain hover:scale-105 transition-all duration-300"
+/>
+
+
+
   </div>
 </motion.div>
 
