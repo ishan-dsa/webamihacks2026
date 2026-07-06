@@ -1,5 +1,4 @@
 "use client";
-
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import {
@@ -12,7 +11,6 @@ import {
   TrendingUp,
   Zap,
 } from "lucide-react";
-
 const reasons = [
   {
     icon: Code2,
@@ -55,11 +53,9 @@ const reasons = [
     desc: "Be part of a vibrant ecosystem that fosters creativity and out-of-the-box thinking.",
   },
 ];
-
 export default function WhyParticipate() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
-
   return (
     <section className="py-18 px-4 relative bg-[#05070f] overflow-hidden">
       {/* Ambient glow — consistent with rest of page */}
@@ -77,7 +73,6 @@ export default function WhyParticipate() {
             "radial-gradient(ellipse, rgba(239,255,0,0.06) 0%, transparent 70%)",
         }}
       />
-
       {/* Faint grid, consistent with other sections */}
       <div
         className="absolute inset-0 pointer-events-none opacity-20"
@@ -89,26 +84,23 @@ export default function WhyParticipate() {
             "radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%)",
         }}
       />
-
       <div className="max-w-6xl mx-auto relative z-10" ref={ref}>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-neon font-mono-code text-xs tracking-[0.3em] uppercase mb-4"
+          className="text-cyan-400 font-mono-code text-xs tracking-[0.3em] uppercase mb-4"
         >
-         
+          &lt;/&gt; Why Participate
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-4xl sm:text-5xl font-bold text-white mb-16 leading-tight max-w-xl"
+          className="text-4xl sm:text-5xl font-bold text-white mb-16 leading-tight max-w-xl drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]"
         >
-          Reasons to Show Up &amp;{" "}
-          <span className="neon-text">Stand Out</span>
+          Reasons to Show Up &amp; Stand Out
         </motion.h2>
-
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {reasons.map((r, i) => {
             const Icon = r.icon;
@@ -119,18 +111,20 @@ export default function WhyParticipate() {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.1 + i * 0.07 }}
                 whileHover={{ y: -6, transition: { duration: 0.2 } }}
-                className="rounded-2xl p-6 bg-white/[0.03] border border-cyan-500/15 backdrop-blur-sm hover:border-neon/30 hover:shadow-[0_0_25px_rgba(239,255,0,0.1)] transition-all group"
+                className="rounded-2xl p-6 bg-white/[0.03] border border-cyan-500/15 backdrop-blur-sm hover:border-cyan-400/40 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)] transition-all group"
               >
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/5 group-hover:bg-neon/10 group-hover:border-neon/20 flex items-center justify-center mb-4 transition-colors">
+                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/5 group-hover:bg-cyan-500/10 group-hover:border-cyan-400/30 flex items-center justify-center mb-4 transition-colors">
                   <Icon
                     size={20}
-                    className="text-white/50 group-hover:text-neon transition-colors"
+                    className="text-cyan-400/70 group-hover:text-cyan-400 transition-colors"
                   />
                 </div>
-                <h3 className="text-white font-semibold text-base mb-2">
+                <h3 className="text-cyan-400 font-bold text-lg mb-2 drop-shadow-[0_0_10px_rgba(56,189,248,0.4)]">
                   {r.title}
                 </h3>
-                <p className="text-white/40 text-sm leading-relaxed">{r.desc}</p>
+                <p className="text-white font-medium text-base leading-relaxed drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]">
+                  {r.desc}
+                </p>
               </motion.div>
             );
           })}
