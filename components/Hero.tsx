@@ -75,34 +75,40 @@ export default function Hero() {
             24th–25th September 2026 · Jaipur
           </span>
         </motion.div>
+        
 {/* Main Heading */}
-        <motion.div
-  initial={{ opacity: 0, scale: 0.9 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.7 }}
-  className="flex items-center justify-center gap-8 mb-8"
+<motion.div
+  custom={0.8}
+  variants={fadeUp}
+  initial="hidden"
+  animate="visible"
+  className="mb-8"
 >
-<div className="flex items-center justify-center gap-6 mb-8">
-  <Image
-    src="/logo.png"
-    alt="AMIHACKS Logo"
-    width={140}
-    height={140}
-    priority
-    className="object-contain"
-  />
+  <div className="flex items-center justify-center gap-6 sm:gap-10">
+    {/* Amity Logo */}
+<Image
+  src="/amity-logo.jpg"
+  alt="Amity University Rajasthan"
+  width={180}
+  height={180}
+  priority
+  className="h-20 sm:h-28 md:h-36 w-auto object-contain hover:scale-105 transition-all duration-300"
+/>
 
-  <Image
-    src="/amity-logo.png"
-    alt="Amity University Rajasthan"
-    width={140}
-    height={140}
-    priority
-    className="object-contain"
-  />
-</div>
+{/* Glowing Divider */}
+<div className="hidden sm:block w-px h-20 bg-neon/50 shadow-[0_0_15px_rgba(239,255,0,0.8)]" />
+
+{/* AMIHACKS Logo */}
+<Image
+  src="/logo.png"
+  alt="AMIHACKS Logo"
+  width={520}
+  height={260}
+  priority
+  className="h-24 sm:h-32 md:h-40 w-auto object-contain hover:scale-105 transition-all duration-300"
+/>
+  </div>
 </motion.div>
-       
 
         <motion.div
           custom={1.5}
