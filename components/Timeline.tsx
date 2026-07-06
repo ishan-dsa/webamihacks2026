@@ -91,9 +91,9 @@ export default function Timeline() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-neon font-mono-code text-xs tracking-[0.3em] uppercase mb-4"
+          className="text-cyan-400 font-mono-code text-xs tracking-[0.3em] uppercase mb-4"
         >
-       
+          &lt;/&gt; Journey Ahead
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -101,7 +101,10 @@ export default function Timeline() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-4xl sm:text-5xl font-bold text-white mb-16"
         >
-          
+          Event{" "}
+          <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(56,189,248,0.5)]">
+            Timeline
+          </span>
         </motion.h2>
         <div className="relative">
           {/* Vertical line */}
