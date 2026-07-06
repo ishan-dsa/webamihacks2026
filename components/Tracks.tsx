@@ -178,10 +178,7 @@ export default function Tracks() {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="text-white/50 text-lg leading-relaxed mb-12 max-w-3xl"
         >
-          Build innovative solutions in any domain using any technology stack.
-          AMIHACKS 2026 encourages creativity, originality and real-world
-          problem solving without restricting participants to predefined
-          tracks.
+         
         </motion.p>
 
         {/* Card */}
