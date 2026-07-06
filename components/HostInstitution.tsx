@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -15,14 +15,36 @@ export default function HostInstitution() {
           Host Institution
         </span>
 
-        <h2 className="mt-4 text-4xl md:text-5xl font-bold neon-text">
-          Proudly Hosted By
-        </h2>
 
-        <p className="mt-5 text-white/70 max-w-3xl mx-auto">
-          AMIHACKS 2026 is proudly organized by the Amity School of
-          Engineering & Technology, Amity University Rajasthan.
-        </p>
+
+
+        
+
+      <h2 className="mt-4 text-4xl md:text-5xl font-bold neon-text">
+  Proudly Hosted By
+</h2>
+
+<div className="flex justify-center mt-6 mb-6">
+  <Image
+    src="/amitylogo.jpg"
+    alt="Amity University Rajasthan"
+    width={180}
+    height={180}
+    priority
+    className="h-24 sm:h-28 md:h-32 w-auto object-contain hover:scale-105 transition-all duration-300"
+  />
+</div>
+
+<p className="text-white/70 max-w-3xl mx-auto">
+ Amity School of Engineering & Technology | Amity University Rajasthan.
+</p>
+
+
+
+
+
+
+        
       </div>
 
       {/* ================= University ================= */}
