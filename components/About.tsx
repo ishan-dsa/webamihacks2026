@@ -72,10 +72,10 @@ export default function About() {
                 ["Duration", "24–25 September 2026 · 24 Hours"],
               ].map(([k, v]) => (
                 <div key={k} className="flex gap-3 text-sm">
-                  <span className="text-white/30 min-w-[110px] font-mono-code">
+                  <span className="text-slate-500 min-w-[110px] font-mono-code">
                     {k}
                   </span>
-                  <span className="text-white/70">{v}</span>
+                  <span className="text-slate-700">{v}</span>
                 </div>
               ))}
             </div>
@@ -97,12 +97,12 @@ export default function About() {
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
                   whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                  className="glass-card rounded-2xl p-6 hover:border-white/15 transition-all"
+                  className="glass-card rounded-2xl p-6 hover:border-blue-300 transition-all shadow-md"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-neon/10 flex items-center justify-center mb-4">
-                    <Icon size={20} className="text-neon" />
+                  <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+                    <Icon size={20} className="text-blue-700" />
                   </div>
-                  <p className="text-white font-semibold text-base">{h.label}</p>
+                  <p className="text-slate-900 font-semibold text-base">{h.label}</p>
                 </motion.div>
               );
             })}
@@ -113,14 +113,14 @@ export default function About() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.7 }}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="col-span-2 glass-card-neon rounded-2xl p-6 flex items-center gap-4 hover:border-neon/25 transition-all"
+              className="col-span-2 glass-card rounded-2xl p-6 flex items-center gap-4 hover:border-blue-300 transition-all shadow-md"
             >
               <span className="text-3xl">🚀</span>
               <div>
-                <p className="text-neon font-bold text-lg">
+                <p className="text-blue-700 font-bold text-lg">
   Pan India Hackathon
 </p>
-<p className="text-white/50 text-sm mt-0.5">
+<p className="text-slate-600 text-sm mt-0.5">
   Open to colleges and universities across India
 </p>
               </div>
