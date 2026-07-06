@@ -73,7 +73,7 @@ export default function Hero() {
           animate="visible"
           className="flex flex-col items-center gap-3 mb-5"
         >
-          <p className="text-cyan-400/70 text-xs font-mono-code tracking-widest uppercase">
+          <p className="text-cyan-400 text-base sm:text-lg font-mono-code font-bold tracking-widest uppercase drop-shadow-[0_0_12px_rgba(56,189,248,0.5)]">
             &lt;/&gt; Hackathon Begins In
           </p>
           <div className="[&_.countdown-box]:bg-[#0a0e1a] [&_.countdown-box]:border [&_.countdown-box]:border-cyan-500/30 [&_.countdown-box]:shadow-[0_0_20px_rgba(56,189,248,0.15)]">
