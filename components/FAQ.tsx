@@ -148,7 +148,7 @@ export default function FAQ() {
           transition={{ duration: 0.5 }}
           className="text-cyan-400/70 font-mono-code text-xs tracking-[0.3em] uppercase mb-4"
         >
-          &lt;/&gt; FAQ
+        
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
