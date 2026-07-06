@@ -79,8 +79,8 @@ className="glass-card rounded-2xl p-4 text-center mb-8 border border-neon/10 max
            <Image
   src="/committee.png"
   alt="Organising Committee"
-  width={100}
-  height={100}
+  width={80}
+  height={80}
   priority
   className="mx-auto mb-8 w-56 sm:w-64 md:w-72 lg:w-80 h-auto object-contain hover:scale-105 transition-all duration-300"
  />
