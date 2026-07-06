@@ -61,7 +61,7 @@ export default function WhyParticipate() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="py-28 px-6 relative bg-[#05070f] overflow-hidden">
+    <section className="py-18 px-4 relative bg-[#05070f] overflow-hidden">
       {/* Ambient glow — consistent with rest of page */}
       <div
         className="absolute right-0 top-1/4 w-[450px] h-[450px] pointer-events-none blur-3xl"
