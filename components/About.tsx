@@ -21,8 +21,8 @@ export default function About() {
       <div
         className="absolute right-0 top-0 w-96 h-96 pointer-events-none"
         style={{
-          background:
-            "radial-gradient(ellipse, rgba(239,255,0,0.04) 0%, transparent 70%)",
+        background:
+  "radial-gradient(ellipse, rgba(37,99,235,0.06) 0%, transparent 70%)",
         }}
       />
       <div className="max-w-6xl mx-auto" ref={ref}>
@@ -31,7 +31,7 @@ export default function About() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-neon font-mono-code text-xs tracking-[0.3em] uppercase mb-4"
+          className="text-blue-700 font-mono-code text-xs tracking-[0.3em] uppercase mb-4"
         >
           About the AmiHacks 2026
         </motion.p>
@@ -43,21 +43,21 @@ export default function About() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
+            <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6 leading-tight">
               About {" "}
-              <span className="neon-text">AMIHACKS</span>
+              <span className="text-blue-700">AMIHACKS</span>
             </h2>
-            <p className="text-white/60 text-lg leading-relaxed mb-5">
-  <span className="text-white font-medium">AMIHACKS 2026</span> is the flagship
+            <p className="text-slate-600 text-lg leading-relaxed mb-5 text-justify">
+  <span className="text-slate-900 font-semibold">AMIHACKS 2026</span> is the flagship
   24-hour national hackathon organized by{" "}
-  <span className="text-white font-medium">
+  <span className="text-slate-900 font-semibold">
     Amity School of Engineering &amp; Technology (ASET)
   </span>
   , Amity University Rajasthan, welcoming students from colleges and
   universities across India.
 </p>
 
-            <p className="text-white/60 text-lg leading-relaxed mb-8">
+            <p className="text-slate-600 text-lg leading-relaxed mb-8 text-justify">
   Participants from across India will collaborate, innovate and build
   impactful solutions during an exciting 24-hour hackathon experience.
 </p>
