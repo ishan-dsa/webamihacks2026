@@ -26,7 +26,7 @@ export default function HostInstitution() {
 
 <div className="flex justify-center mt-6 mb-6">
   <Image
-    src="/amitylogo.jpg"
+    src="/amity-logo.jpg"
     alt="Amity University Rajasthan"
     width={180}
     height={180}
