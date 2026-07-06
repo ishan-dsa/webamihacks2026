@@ -41,14 +41,23 @@ const faqs = [
     q: "How will projects be evaluated?",
     a: "Projects will be evaluated by the judging panel based on innovation, technical implementation, usability, impact, presentation, and adherence to the problem statement. Additional evaluation benefits may apply as per the official event policy.",
   },
-
   {
-  q: "Will internet and power supply be available during the hackathon?",
-  a: "Yes. High-speed internet connectivity and uninterrupted power supply will be available throughout the event to support all participating teams."
-},
+    q: "Will internet and power supply be available during the hackathon?",
+    a: "Yes. High-speed internet connectivity and uninterrupted power supply will be available throughout the event to support all participating teams.",
+  },
 ];
 
-function FAQItem({ q, a, i, inView }: { q: string; a: string; i: number; inView: boolean }) {
+function FAQItem({
+  q,
+  a,
+  i,
+  inView,
+}: {
+  q: string;
+  a: string;
+  i: number;
+  inView: boolean;
+}) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -56,20 +65,23 @@ function FAQItem({ q, a, i, inView }: { q: string; a: string; i: number; inView:
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
-      className="border-b border-white/8 last:border-b-0"
+      className="border-b border-cyan-500/10 last:border-b-0"
     >
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between py-5 text-left gap-6 group"
       >
-        <span className="text-white/90 group-hover:text-neon text-base font-medium transition-colors">
+        <span className="text-white/90 group-hover:text-cyan-400 text-base font-medium transition-colors">
           {q}
         </span>
-        <span className="flex-shrink-0 w-8 h-8 rounded-full border border-white/10 group-hover:border-neon/40 flex items-center justify-center transition-all">
+        <span className="flex-shrink-0 w-8 h-8 rounded-full border border-cyan-500/20 group-hover:border-cyan-400/50 flex items-center justify-center transition-all">
           {open ? (
-            <Minus size={14} className="text-neon" />
+            <Minus size={14} className="text-cyan-400" />
           ) : (
-            <Plus size={14} className="text-white/40 group-hover:text-neon transition-colors" />
+            <Plus
+              size={14}
+              className="text-slate-400 group-hover:text-cyan-400 transition-colors"
+            />
           )}
         </span>
       </button>
@@ -82,7 +94,7 @@ function FAQItem({ q, a, i, inView }: { q: string; a: string; i: number; inView:
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <p className="text-white/60 text-sm leading-relaxed pb-5 max-w-2xl" >
+            <p className="text-slate-400 text-sm leading-relaxed pb-5 max-w-2xl">
               {a}
             </p>
           </motion.div>
@@ -97,15 +109,46 @@ export default function FAQ() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="faq" className="py-28 px-6 bg-white/[0.01]">
-      <div className="max-w-3xl mx-auto" ref={ref}>
+    <section
+      id="faq"
+      className="relative py-28 px-6 overflow-hidden bg-[#05070f]"
+    >
+      {/* Grid pattern overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-40"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(56,189,248,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(56,189,248,0.07) 1px, transparent 1px)",
+          backgroundSize: "48px 48px",
+          maskImage:
+            "radial-gradient(ellipse 80% 60% at 50% 30%, black 40%, transparent 100%)",
+        }}
+      />
+
+      {/* Ambient glow blobs — cyan / violet, matching Hero */}
+      <div
+        className="absolute top-0 left-1/3 w-[550px] h-[550px] rounded-full pointer-events-none blur-3xl"
+        style={{
+          background:
+            "radial-gradient(ellipse, rgba(56,189,248,0.14) 0%, transparent 70%)",
+        }}
+      />
+      <div
+        className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full pointer-events-none blur-3xl"
+        style={{
+          background:
+            "radial-gradient(ellipse, rgba(168,85,247,0.12) 0%, transparent 70%)",
+        }}
+      />
+
+      <div className="relative z-10 max-w-3xl mx-auto" ref={ref}>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-neon font-mono-code text-xs tracking-[0.3em] uppercase mb-4"
+          className="text-cyan-400/70 font-mono-code text-xs tracking-[0.3em] uppercase mb-4"
         >
-          FAQ
+          &lt;/&gt; FAQ
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -113,22 +156,26 @@ export default function FAQ() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-4xl sm:text-5xl font-bold text-white mb-12"
         >
-         Frequently Asked <span className="neon-text">Questions</span>
+          Frequently Asked{" "}
+          <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(56,189,248,0.5)]">
+            Questions
+          </span>
         </motion.h2>
 
-        <div className="glass-card rounded-2xl px-6 sm:px-8">
+        <div className="rounded-2xl px-6 sm:px-8 bg-white/[0.03] border border-cyan-500/20 backdrop-blur-sm shadow-[0_0_25px_rgba(56,189,248,0.08)]">
           {faqs.map((f, i) => (
             <FAQItem key={i} q={f.q} a={f.a} i={i} inView={inView} />
           ))}
         </div>
         <motion.p
-  initial={{ opacity: 0 }}
-  animate={inView ? { opacity: 1 } : {}}
-  transition={{ delay: 0.5 }}
-  className="text-center text-white/40 text-sm mt-8"
->
-  Still have questions? Reach out to the AMIHACKS organizing team through the official contact channels.
-</motion.p>
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.5 }}
+          className="text-center text-slate-400 text-sm mt-8"
+        >
+          Still have questions? Reach out to the AMIHACKS organizing team
+          through the official contact channels.
+        </motion.p>
       </div>
     </section>
   );
