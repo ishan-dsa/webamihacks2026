@@ -54,7 +54,7 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="text-cyan-400 font-mono-code text-xs tracking-[0.3em] uppercase mb-4"
         >
-          &lt;/&gt; About the AmiHacks 2026
+        
         </motion.p>
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
