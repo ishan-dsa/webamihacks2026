@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: "What is the registration fee?",
-    a: "The registration fee is ₹350 per team for Amity University Rajasthan students and ₹450 per team for participants from other colleges. Please complete the payment through the official payment portal before submitting the registration form.",
+    a: "The registration fee is ₹300(+ GST & Payment gateway Charges) per team for Amity University Rajasthan students and ₹400(+ GST & Payment gateway Charges) per team for participants from other colleges. Please complete the payment through the official payment portal before submitting the registration form.",
   },
   {
     q: "What do participants receive?",
