@@ -30,6 +30,8 @@ const faculty = [
     name: "Prof. Bhupesh Kumar Singh",
     role: "Host & Deputy Diretor ASET ",
     image: "/committee/bhupesh.jpg",
+      imageClass: "object-[50%_15%]",
+
   },
   {
     name: "Prof. Sunil Pathak",
