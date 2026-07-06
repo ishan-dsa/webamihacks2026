@@ -27,12 +27,12 @@ const faculty = [
   },
   {
     name: "Prof. Bhupesh Kumar Singh",
-    role: "Host",
+    role: "Host & Deputy Diretor ASET ",
     image: "/committee/bhupesh.jpg",
   },
   {
     name: "Prof. Sunil Pathak",
-    role: "Faculty Coordinator",
+    role: "Faculty Coordinator & HOD CSE",
     image: "/committee/sunil.jpg",
   },
   {
@@ -80,8 +80,8 @@ export default function Committee() {
            <Image
   src="/committee.png"
   alt="Organising Committee"
-  width={300}
-  height={300}
+  width={180}
+  height={180}
   priority
   className="mx-auto mb-8 w-56 sm:w-64 md:w-72 lg:w-80 h-auto object-contain hover:scale-105 transition-all duration-300"
  />
