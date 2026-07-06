@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import Countdown from "./Countdown";
 import Image from "next/image";
+import Typewriter from "@/components/Typewriter";
 
 
 
