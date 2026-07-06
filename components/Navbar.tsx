@@ -34,31 +34,31 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-3">
           <Image
             src="/logo.png"
             alt="AMIHACKS Logo"
-            width={48}
-            height={48}
+            width={72}
+            height={72}
             priority
-            className="object-contain"
+            className="object-contain w-16 h-16 sm:w-[72px] sm:h-[72px]"
           />
           <div className="flex flex-col leading-none">
-            <span className="font-mono-code text-lg font-bold text-cyan-400 drop-shadow-[0_0_10px_rgba(56,189,248,0.4)]">
+            <span className="font-mono-code text-xl sm:text-2xl font-bold text-cyan-400 drop-shadow-[0_0_10px_rgba(56,189,248,0.4)]">
               AMIHACKS
             </span>
           </div>
         </a>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-slate-300 hover:text-cyan-400 text-sm font-medium transition-colors duration-200"
+              className="text-white hover:text-cyan-400 text-lg font-bold transition-colors duration-200"
             >
               {link.label}
             </a>
@@ -68,7 +68,7 @@ export default function Navbar() {
         {/* Register Button */}
         <a
           href="#register"
-          className="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold px-5 py-2 rounded-full hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 shadow-[0_0_20px_rgba(56,189,248,0.35)]"
+          className="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-base font-bold px-6 py-3 rounded-full hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 shadow-[0_0_20px_rgba(56,189,248,0.35)]"
         >
           Register Now
         </a>
@@ -79,7 +79,7 @@ export default function Navbar() {
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          {open ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
 
@@ -88,14 +88,14 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-[#05070f]/95 backdrop-blur-xl border-t border-cyan-500/20 px-6 py-6 flex flex-col gap-4 shadow-[0_10px_30px_rgba(0,0,0,0.4)]"
+          className="md:hidden bg-[#05070f]/95 backdrop-blur-xl border-t border-cyan-500/20 px-6 py-6 flex flex-col gap-5 shadow-[0_10px_30px_rgba(0,0,0,0.4)]"
         >
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="text-slate-300 hover:text-cyan-400 text-base font-medium transition-colors"
+              className="text-white hover:text-cyan-400 text-lg font-bold transition-colors"
             >
               {link.label}
             </a>
@@ -103,7 +103,7 @@ export default function Navbar() {
           <a
             href="#register"
             onClick={() => setOpen(false)}
-            className="mt-2 inline-flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold px-5 py-2.5 rounded-full hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 shadow-[0_0_20px_rgba(56,189,248,0.35)]"
+            className="mt-2 inline-flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold px-5 py-3 rounded-full hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 shadow-[0_0_20px_rgba(56,189,248,0.35)]"
           >
             Register Now
           </a>
