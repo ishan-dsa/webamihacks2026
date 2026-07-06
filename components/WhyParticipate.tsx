@@ -61,15 +61,43 @@ export default function WhyParticipate() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="py-28 px-6 relative bg-white/[0.01]">
-      <div className="max-w-6xl mx-auto" ref={ref}>
+    <section className="py-28 px-6 relative bg-[#05070f] overflow-hidden">
+      {/* Ambient glow — consistent with rest of page */}
+      <div
+        className="absolute right-0 top-1/4 w-[450px] h-[450px] pointer-events-none blur-3xl"
+        style={{
+          background:
+            "radial-gradient(ellipse, rgba(56,189,248,0.09) 0%, transparent 70%)",
+        }}
+      />
+      <div
+        className="absolute left-0 bottom-0 w-[350px] h-[350px] pointer-events-none blur-3xl"
+        style={{
+          background:
+            "radial-gradient(ellipse, rgba(239,255,0,0.06) 0%, transparent 70%)",
+        }}
+      />
+
+      {/* Faint grid, consistent with other sections */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-20"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(56,189,248,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(56,189,248,0.06) 1px, transparent 1px)",
+          backgroundSize: "48px 48px",
+          maskImage:
+            "radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%)",
+        }}
+      />
+
+      <div className="max-w-6xl mx-auto relative z-10" ref={ref}>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
           className="text-neon font-mono-code text-xs tracking-[0.3em] uppercase mb-4"
         >
-          Why Participate
+          &lt;/&gt; Why Participate
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -91,9 +119,9 @@ export default function WhyParticipate() {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.1 + i * 0.07 }}
                 whileHover={{ y: -6, transition: { duration: 0.2 } }}
-                className="glass-card rounded-2xl p-6 hover:border-white/12 transition-all group"
+                className="rounded-2xl p-6 bg-white/[0.03] border border-cyan-500/15 backdrop-blur-sm hover:border-neon/30 hover:shadow-[0_0_25px_rgba(239,255,0,0.1)] transition-all group"
               >
-                <div className="w-10 h-10 rounded-lg bg-white/5 group-hover:bg-neon/10 flex items-center justify-center mb-4 transition-colors">
+                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/5 group-hover:bg-neon/10 group-hover:border-neon/20 flex items-center justify-center mb-4 transition-colors">
                   <Icon
                     size={20}
                     className="text-white/50 group-hover:text-neon transition-colors"
