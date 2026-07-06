@@ -241,18 +241,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="hidden sm:flex flex-col items-center gap-1 absolute bottom-8"
-      >
-        <span className="text-xs font-mono-code tracking-widest uppercase text-cyan-400/50">
-          Scroll
-        </span>
-        <ChevronDown size={16} className="animate-bounce text-cyan-400/50" />
-      </motion.div>
+     
     </section>
   );
 }
