@@ -158,29 +158,43 @@ export default function Hero() {
 </motion.div>
         
 
-        {/* Tagline */}
-        <motion.p
-          custom={2}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          className="text-xl sm:text-2xl md:text-3xl font-semibold text-slate-900 mb-4 tracking-wide"
-        >
-          LET THE CODE BEGIN
-        </motion.p>
+        {/* Typewriter Tagline */}
+<motion.div
+  custom={2}
+  variants={fadeUp}
+  initial="hidden"
+  animate="visible"
+  className="text-xl sm:text-2xl md:text-3xl font-semibold text-slate-900 mb-4 tracking-wide min-h-[48px] flex justify-center items-center"
+>
+  <Typewriter />
+</motion.div>
 
         {/* Subtitle */}
-        <motion.p
-          custom={2.5}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed text-justify"
-        >
-          India's premier 24-hour hackathon hosted by Amity School of Engineering & Technology,
-          welcoming students from colleges and universities across India to innovate,  
-          collaborate and build impactful solutions.
-        </motion.p>
+<motion.p
+  custom={2.5}
+  variants={fadeUp}
+  initial="hidden"
+  animate="visible"
+  transition={{ duration: 0.8 }}
+  className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed text-justify"
+>
+  {"India's premier 24-hour hackathon hosted by Amity School of Engineering & Technology, welcoming students from colleges and universities across India to innovate, collaborate and build impactful solutions."
+    .split(" ")
+    .map((word, index) => (
+      <motion.span
+        key={index}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: index * 0.04,
+          duration: 0.3,
+        }}
+        className="inline-block mr-1"
+      >
+        {word}
+      </motion.span>
+    ))}
+</motion.p>
 
         {/* Buttons */}
         <motion.div
