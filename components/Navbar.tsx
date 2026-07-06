@@ -34,29 +34,31 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-3">
           <Image
             src="/logo.png"
             alt="AMIHACKS Logo"
-            width={150}
-            height={150}
+            width={72}
+            height={72}
             priority
-            className="object-contain"
+            className="object-contain w-16 h-16 sm:w-[72px] sm:h-[72px]"
           />
           <div className="flex flex-col leading-none">
-            
+            <span className="font-mono-code text-xl sm:text-2xl font-bold text-cyan-400 drop-shadow-[0_0_10px_rgba(56,189,248,0.4)]">
+              AMIHACKS
+            </span>
           </div>
         </a>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-white hover:text-cyan-400 text-lg font-bold transition-colors duration-200"
+              className="text-white hover:text-cyan-400 text-xl font-bold transition-colors duration-200"
             >
               {link.label}
             </a>
@@ -93,7 +95,7 @@ export default function Navbar() {
               key={link.label}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="text-white hover:text-cyan-400 text-lg font-bold transition-colors"
+              className="text-white hover:text-cyan-400 text-xl font-bold transition-colors"
             >
               {link.label}
             </a>
