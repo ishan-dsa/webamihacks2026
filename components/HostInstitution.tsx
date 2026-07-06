@@ -11,7 +11,7 @@ export default function HostInstitution() {
     <section id="host" className="py-24 px-6 max-w-5xl mx-auto">
       {/* Heading */}
       <div className="text-center mb-16">
-        <span className="font-mono-code text-sm tracking-[0.35em] text-neon uppercase">
+        <span className="font-mono-code text-sm tracking-[0.35em] text-blue-700 uppercase">
           Host Institution
         </span>
 
@@ -20,7 +20,7 @@ export default function HostInstitution() {
 
         
 
-      <h2 className="mt-4 text-4xl md:text-5xl font-bold neon-text">
+      <h2 className="mt-4 text-4xl md:text-5xl font-bold text-slate-900">
   Proudly Hosted By
 </h2>
 
