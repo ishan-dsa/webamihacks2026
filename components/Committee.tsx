@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 const faculty = [
   {
@@ -45,8 +45,6 @@ const faculty = [
 
 export default function Committee() {
   const ref = useRef(null);
-  const [showTeam, setShowTeam] = useState(false);
-
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
@@ -102,91 +100,42 @@ export default function Committee() {
           the Event
         </motion.h2>
 
-        {/* Our Team */}
-        {!showTeam ? (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5 }}
-            className="rounded-2xl p-4 text-center mb-8 bg-white/[0.03] border border-cyan-500/20 backdrop-blur-sm shadow-[0_0_25px_rgba(56,189,248,0.08)] max-w-md mx-auto"
-          >
-            <Image
-              src="/committee.png"
-              alt="Organising Committee"
-              width={80}
-              height={80}
-              priority
-              className="mx-auto mb-8 w-56 sm:w-64 md:w-72 lg:w-80 h-auto object-contain hover:scale-105 transition-all duration-300"
-            />
-
-            <h3 className="text-2xl font-bold text-white mb-2">
-              Organising Committee
-            </h3>
-
-            <p className="text-slate-400 max-w-lg mx-auto leading-relaxed mb-8">
-              Meet our Inspirations & mentors, dedicated coordinators, and
-              faculty behind AMIHACKS 2026.
-            </p>
-
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              onClick={() => setShowTeam(true)}
-              className="group inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-base px-6 py-2.5 rounded-full hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 shadow-[0_0_25px_rgba(56,189,248,0.4)]"
-            >
-              View Committee →
-            </motion.button>
-          </motion.div>
-        ) : (
-          <>
+        {/* Faculty grid — always visible */}
+        <motion.div
+          layout
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+        >
+          {faculty.map((f, i) => (
             <motion.div
-              layout
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10"
+              key={f.name}
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
+              transition={{ duration: 0.45, delay: i * 0.08 }}
+              whileHover={{ y: -8, scale: 1.03 }}
+              className="rounded-2xl p-6 text-center bg-white/[0.03] border border-cyan-500/20 backdrop-blur-sm hover:border-cyan-400/50 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)] transition-all"
             >
-              {faculty.map((f, i) => (
-                <motion.div
-                  key={f.name}
-                  initial={{ opacity: 0, y: 40, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0.45, delay: i * 0.08 }}
-                  whileHover={{ y: -8, scale: 1.03 }}
-                  className="rounded-2xl p-6 text-center bg-white/[0.03] border border-cyan-500/20 backdrop-blur-sm hover:border-cyan-400/50 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)] transition-all"
-                >
-                  <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-cyan-500/25 mx-auto mb-5 shadow-[0_0_20px_rgba(56,189,248,0.15)]">
-                    <Image
-                      src={f.image}
-                      alt={f.name}
-                      width={144}
-                      height={144}
-                      className={`w-full h-full object-cover ${
-                        f.imageClass ?? "object-center"
-                      }`}
-                    />
-                  </div>
+              <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-cyan-500/25 mx-auto mb-5 shadow-[0_0_20px_rgba(56,189,248,0.15)]">
+                <Image
+                  src={f.image}
+                  alt={f.name}
+                  width={144}
+                  height={144}
+                  className={`w-full h-full object-cover ${
+                    f.imageClass ?? "object-center"
+                  }`}
+                />
+              </div>
 
-                  <h3 className="text-white font-semibold text-lg mb-2">
-                    {f.name}
-                  </h3>
+              <h3 className="text-white font-semibold text-lg mb-2">
+                {f.name}
+              </h3>
 
-                  <p className="text-cyan-400/60 text-sm font-mono-code">
-                    {f.role}
-                  </p>
-                </motion.div>
-              ))}
+              <p className="text-cyan-400/60 text-sm font-mono-code">
+                {f.role}
+              </p>
             </motion.div>
-
-            <div className="flex justify-center mb-16">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.97 }}
-                onClick={() => setShowTeam(false)}
-                className="px-8 py-3 rounded-full border border-cyan-500/30 bg-white/[0.03] backdrop-blur-sm text-slate-200 font-semibold hover:border-cyan-400/60 hover:bg-white/[0.06] transition-all duration-200"
-              >
-                Hide Team ↑
-              </motion.button>
-            </div>
-          </>
-        )}
+          ))}
+        </motion.div>
 
         {/* Institution Info */}
         <motion.div
