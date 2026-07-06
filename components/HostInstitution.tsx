@@ -37,7 +37,7 @@ export default function HostInstitution() {
       {/* Heading */}
       <div className="text-center mb-16 relative z-10">
         <span className="font-mono-code text-sm tracking-[0.35em] text-cyan-400 uppercase">
-          &lt;/&gt; Host Institution
+      
         </span>
 
         <h2 className="mt-4 text-4xl md:text-5xl font-bold text-white">
