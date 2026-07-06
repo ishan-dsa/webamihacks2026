@@ -109,3 +109,14 @@ img,
   background: #2563eb;
   border-radius: 20px;
 }
+
+
+@layer utilities {
+  .bg-neon {
+    background-color: #2563eb;
+  }
+
+  .bg-neon:hover {
+    background-color: #1d4ed8;
+  }
+}
