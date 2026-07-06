@@ -9,10 +9,11 @@ const faculty = [
     name: "Dr. Ashok K. Chauhan",
     role: "Founder President, Amity Group",
     image: "/committee/ashok.jpg",
+     imageClass: "object-top",
   },
   {
     name: "Dr. Asim Chauhan",
-    role: "Chancellor Amity University",
+    role: "Chancellor, Amity University",
     image: "/committee/asim.jpg",
   },
   {
@@ -120,12 +121,12 @@ className="px-6 py-2.5 rounded-full bg-neon text-black font-semibold shadow-[0_0
                 >
                   <div className="w-36 h-36 rounded-full overflow-hidden border-2 border-neon/20 mx-auto mb-5">
                     <Image
-                      src={f.image}
-                      alt={f.name}
-                      width={144}
-                      height={144}
-                      className="w-full h-full object-cover"
-                    />
+  src={f.image}
+  alt={f.name}
+  width={144}
+  height={144}
+  className={`w-full h-full object-cover ${f.imageClass ?? "object-center"}`}
+/>
                   </div>
 
                   <h3 className="text-white font-semibold text-lg mb-2">
