@@ -78,7 +78,7 @@ export default function Committee() {
             className="glass-card rounded-3xl p-12 text-center mb-16 border border-neon/10 max-w-3xl mx-auto"
           >
            <Image
-  src="/committee.png"
+  src="/committee.jpg"
   alt="Organising Committee"
   width={300}
   height={300}
