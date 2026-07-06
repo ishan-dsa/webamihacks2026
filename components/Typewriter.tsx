@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 
 const words = [
-  "Build.",
-  "Innovate.",
-  "Collaborate.",
-  "Win.",
+  "LET THE CODE BEGIN",
+  "BUILD • INNOVATE • COMPETE",
+  "24 HOURS OF INNOVATION",
+  "CREATE THE FUTURE",
 ];
 
 export default function Typewriter() {
@@ -15,31 +15,30 @@ export default function Typewriter() {
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const currentWord = words[wordIndex];
-    const speed = isDeleting ? 50 : 100;
+    const current = words[wordIndex];
 
-    const timer = setTimeout(() => {
+    const timeout = setTimeout(() => {
       if (!isDeleting) {
-        setText(currentWord.substring(0, text.length + 1));
+        setText(current.substring(0, text.length + 1));
 
-        if (text === currentWord) {
-          setTimeout(() => setIsDeleting(true), 1200);
+        if (text === current) {
+          setTimeout(() => setIsDeleting(true), 1500);
         }
       } else {
-        setText(currentWord.substring(0, text.length - 1));
+        setText(current.substring(0, text.length - 1));
 
         if (text === "") {
           setIsDeleting(false);
           setWordIndex((prev) => (prev + 1) % words.length);
         }
       }
-    }, speed);
+    }, isDeleting ? 45 : 90);
 
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timeout);
   }, [text, isDeleting, wordIndex]);
 
   return (
-    <span className="text-blue-700 font-bold">
+    <span className="inline-block text-blue-700 font-bold">
       {text}
       <span className="animate-pulse">|</span>
     </span>
