@@ -48,7 +48,7 @@ export default function Committee() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="relative py-28 px-6 overflow-hidden bg-[#05070f]">
+    <section className="relative py-28 px-4 overflow-hidden bg-[#05070f]">
       {/* Grid pattern overlay */}
       <div
         className="absolute inset-0 pointer-events-none opacity-40"
