@@ -26,12 +26,12 @@ const faculty = [
     image: "/committee/aseri.jpg",
   },
   {
-    name: "Dr. Bhupesh Kumar Singh",
+    name: "Prof. Bhupesh Kumar Singh",
     role: "Host",
     image: "/committee/bhupesh.jpg",
   },
   {
-    name: "Dr. Sunil Pathak",
+    name: "Prof. Sunil Pathak",
     role: "Faculty Coordinator",
     image: "/committee/sunil.jpg",
   },
