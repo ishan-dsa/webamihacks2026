@@ -35,14 +35,14 @@ export default function Hero() {
         className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse, rgba(239,255,0,0.07) 0%, transparent 70%)",
+  "radial-gradient(ellipse, rgba(37,99,235,0.10) 0%, transparent 70%)",
         }}
       />
       <div
         className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none"
         style={{
-          background:
-            "radial-gradient(ellipse, rgba(239,255,0,0.04) 0%, transparent 70%)",
+         background:
+  "radial-gradient(ellipse, rgba(37,99,235,0.06) 0%, transparent 70%)",
         }}
       />
 
