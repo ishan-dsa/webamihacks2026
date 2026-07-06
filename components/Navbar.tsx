@@ -41,14 +41,12 @@ export default function Navbar() {
             src="/logo.png"
             alt="AMIHACKS Logo"
             width={72}
-            height={72}
+            height={100}
             priority
             className="object-contain w-16 h-16 sm:w-[72px] sm:h-[72px]"
           />
           <div className="flex flex-col leading-none">
-            <span className="font-mono-code text-xl sm:text-2xl font-bold text-cyan-400 drop-shadow-[0_0_10px_rgba(56,189,248,0.4)]">
-              AMIHACKS
-            </span>
+            
           </div>
         </a>
 
