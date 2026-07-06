@@ -75,7 +75,7 @@ export default function Committee() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-className="glass-card rounded-3xl p-5 text-center mb-10 border border-neon/10 max-w-lg mx-auto"         >
+className="glass-card rounded-2xl p-4 text-center mb-8 border border-neon/10 max-w-md mx-auto"      >
            <Image
   src="/committee.png"
   alt="Organising Committee"
@@ -87,7 +87,7 @@ className="glass-card rounded-3xl p-5 text-center mb-10 border border-neon/10 ma
 
           
 
-            <h3 className="text-3xl font-bold text-white mb-4">
+            <h3 className="text-2xl font-bold text-white mb-2">
   Organising Committee
             </h3>
 
