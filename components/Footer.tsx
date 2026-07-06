@@ -154,11 +154,11 @@ export default function Footer() {
           <div className="mt-6 sm:mt-0 sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:top-1/2 sm:-translate-y-1/2">
             <span className="flex flex-col items-center text-center">
               <span className="text-slate-300 text-base sm:text-lg font-medium tracking-wide">
-                Engineered &amp; Crafted with ❤️ By-
+                Engineered &amp; Crafted with ❤️
               </span>
 
               <span className="font-script text-cyan-400 text-2xl sm:text-3xl mt-1 drop-shadow-[0_0_15px_rgba(56,189,248,0.5)]">
-                Ishan Verma
+                
               </span>
             </span>
           </div>
