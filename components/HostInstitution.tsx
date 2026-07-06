@@ -11,7 +11,7 @@ export default function HostInstitution() {
     <div className="py-28 px-4 relative bg-[#05070f] overflow-hidden">
     <section
       id="host"
-      className="py-24 px-6 max-w-5xl mx-auto relative bg-[#05070f] overflow-hidden"
+      className="py-24 px-4 max-w-5xl mx-auto relative bg-[#05070f] overflow-hidden"
     >
       {/* Ambient glow */}
       <div
