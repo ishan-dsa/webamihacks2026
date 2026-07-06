@@ -81,12 +81,10 @@ export default function Committee() {
               👥
             </div>
 
-            <p className="text-neon uppercase tracking-[0.3em] text-xs font-mono-code mb-3">
-              ORGANIZING COMMITTEE
-            </p>
+          
 
             <h3 className="text-4xl font-bold text-white mb-4">
-              Meet Our Team
+  Organising Committee
             </h3>
 
             <p className="text-white/60 max-w-lg mx-auto leading-relaxed mb-8">
@@ -101,7 +99,7 @@ export default function Committee() {
               onClick={() => setShowTeam(true)}
               className="px-8 py-3 rounded-full bg-neon text-black font-semibold shadow-[0_0_30px_rgba(0,255,200,0.35)] transition-all"
             >
-              View Team →
+              View Committee →
             </motion.button>
           </motion.div>
         ) : (
