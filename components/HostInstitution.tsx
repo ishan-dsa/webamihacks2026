@@ -8,7 +8,7 @@ export default function HostInstitution() {
   const [showASET, setShowASET] = useState(false);
 
   return (
-    <div className="py-28 px-6 relative bg-[#05070f] overflow-hidden">
+    <div className="py-28 px-4 relative bg-[#05070f] overflow-hidden">
     <section
       id="host"
       className="py-24 px-6 max-w-5xl mx-auto relative bg-[#05070f] overflow-hidden"
