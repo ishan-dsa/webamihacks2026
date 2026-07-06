@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-<main className="min-h-screen bg-gradient-to-br from-blue-200 via-blue-50 to-white">
+<main className="min-h-screen bg-[#4C6EF4]">
     <Navbar />
       <Hero />
       <About />
