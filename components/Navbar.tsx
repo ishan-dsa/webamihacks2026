@@ -29,9 +29,9 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-black/80 backdrop-blur-md border-b border-white/5"
-          : "bg-transparent"
+      scrolled
+  ? "bg-white/90 backdrop-blur-xl border-b border-blue-200 shadow-sm"
+  : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -48,13 +48,11 @@ export default function Navbar() {
           />
 
           <div className="flex flex-col leading-none">
-            <span className="font-mono-code text-lg font-bold neon-text">
+            <span className="font-mono-code text-lg font-bold text-blue-700">
               AMIHACKS
             </span>
 
-            <span className="font-mono-code text-xs text-white/60 tracking-[0.3em]">
-              2026
-            </span>
+            
           </div>
         </a>
 
@@ -64,7 +62,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="text-white/60 hover:text-white text-sm transition-colors duration-200"
+              className="text-slate-600 hover:text-blue-700 text-sm font-medium transition-colors duration-200"
             >
               {link.label}
             </a>
@@ -74,14 +72,14 @@ export default function Navbar() {
         {/* Register Button */}
         <a
           href="#register"
-          className="hidden md:inline-flex items-center gap-2 bg-neon text-black text-sm font-semibold px-5 py-2 rounded-full hover:bg-white transition-colors duration-200"
+          className="hidden md:inline-flex items-center gap-2 bg-blue-700 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-blue-800 transition-all duration-200 shadow-md"
         >
           Register Now
         </a>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white p-1"
+          className="md:hidden text-slate-800 p-1"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -94,14 +92,14 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-black/95 backdrop-blur-md border-t border-white/5 px-6 py-6 flex flex-col gap-4"
+          className="md:hidden bg-white/95 backdrop-blur-xl border-t border-blue-200 px-6 py-6 flex flex-col gap-4 shadow-lg"
         >
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="text-white/70 hover:text-white text-base transition-colors"
+              className="text-slate-700 hover:text-blue-700 text-base font-medium transition-colors"
             >
               {link.label}
             </a>
@@ -110,7 +108,7 @@ export default function Navbar() {
           <a
             href="#register"
             onClick={() => setOpen(false)}
-            className="mt-2 inline-flex items-center justify-center bg-neon text-black font-semibold px-5 py-2.5 rounded-full"
+            className="mt-2 inline-flex items-center justify-center bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-full hover:bg-blue-800 transition-all"
           >
             Register Now
           </a>
