@@ -75,8 +75,7 @@ export default function Committee() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="glass-card rounded-3xl p-12 text-center mb-16 border border-neon/10 max-w-3xl mx-auto"
-          >
+className="glass-card rounded-3xl p-8 text-center mb-14 border border-neon/10 max-w-2xl mx-auto"          >
            <Image
   src="/committee.png"
   alt="Organising Committee"
@@ -88,22 +87,19 @@ export default function Committee() {
 
           
 
-            <h3 className="text-4xl font-bold text-white mb-4">
+            <h3 className="text-3xl font-bold text-white mb-4">
   Organising Committee
             </h3>
 
             <p className="text-white/60 max-w-lg mx-auto leading-relaxed mb-8">
-              Behind every successful hackathon is a dedicated team of mentors,
-              coordinators, and faculty members working tirelessly to create an
-              unforgettable experience.
+              Meet our Inspirations & mentors, dedicated coordinators, and faculty behind AMIHACKS 2026.
             </p>
 
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => setShowTeam(true)}
-              className="px-8 py-3 rounded-full bg-neon text-black font-semibold shadow-[0_0_30px_rgba(0,255,200,0.35)] transition-all"
-            >
+className="px-6 py-2.5 rounded-full bg-neon text-black font-semibold shadow-[0_0_25px_rgba(0,255,200,0.35)] transition-all"            >
               View Committee →
             </motion.button>
           </motion.div>
