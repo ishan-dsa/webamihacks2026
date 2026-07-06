@@ -62,7 +62,7 @@ export default function Timeline() {
   return (
     <section
       id="timeline"
-      className="py-28 px-6 relative bg-[#05070f] overflow-hidden"
+      className="py-28 px-4 relative bg-[#05070f] overflow-hidden"
     >
       {/* Ambient glow — consistent with rest of page */}
       <div
