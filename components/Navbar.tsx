@@ -40,10 +40,10 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="AMIHACKS Logo"
-            width={100}
-            height={100}
+            width={150}
+            height={150}
             priority
-            className="object-contain w-16 h-16 sm:w-[72px] sm:h-[72px]"
+            className="object-contain"
           />
           <div className="flex flex-col leading-none">
             
