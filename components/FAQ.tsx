@@ -111,7 +111,7 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="relative py-28 px-6 overflow-hidden bg-[#05070f]"
+      className="relative py-28 px-4 overflow-hidden bg-[#05070f]"
     >
       {/* Grid pattern overlay */}
       <div
