@@ -40,7 +40,7 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="AMIHACKS Logo"
-            width={72}
+            width={100}
             height={100}
             priority
             className="object-contain w-16 h-16 sm:w-[72px] sm:h-[72px]"
