@@ -183,7 +183,7 @@ export default function Hero() {
           className="text-white font-medium text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed text-justify drop-shadow-[0_0_8px_rgba(255,255,255,0.25)]"
         >
           <P>
-          {"India's premier 24-hour hackathon hosted by Amity School of Engineering & Technology, welcoming students from colleges and universities across India to innovate, collaborate and build impactful solutions."
+          {"India's premier 24-hour hackathon, hosted by Amity School of Engineering & Technology, welcomes students from colleges and universities across India to innovate, collaborate, and build impactful solutions."
             .split(" ")
             .map((word, index) => (
               <motion.span
