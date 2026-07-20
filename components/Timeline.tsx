@@ -41,7 +41,7 @@ const events = [
     phase: "06",
     title: "Final Evaluation",
     desc: "Present your project to a jury panel. Judged on innovation, impact, and execution.",
-    tag: "25 Sep · AM",
+    tag: "25 Sep · Morning",
     active: false,
   },
   {
