@@ -74,12 +74,12 @@ export default function Register() {
               </span>
             </h2>
             <p className="text-slate-400 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
-              Register for AMIHACKS 2026 in two simple steps. First, complete
+              Register for AMIHACKS 2026 in just two simple steps. First, complete
               the registration payment, then submit the registration form
               along with your payment screenshot to confirm your
               participation. </p>
             <p className="text-slate-200 text-lg mb-10 max-w-xl mx-auto leading-relaxed"> 
-              <b><u>Special Bonus:</u></b> <i>Teams with at least one female member will be eligible for additional evaluation points, subject to the applicable terms and conditions. </i>
+              <b><u>Special Bonus:</u></b> <i>Teams with at least one female member are eligible for additional evaluation points, subject to the applicable terms and conditions. </i>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
