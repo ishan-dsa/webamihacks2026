@@ -14,7 +14,7 @@ const prizes = [
   },
   {
     emoji: "🥈",
-    rank: "Runner Up",
+    rank: "Runner-Up",
     label: "2nd Place",
     amount: "Runner's Prize",
     highlight: false,
