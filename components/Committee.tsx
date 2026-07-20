@@ -13,7 +13,7 @@ const faculty = [
   },
   {
     name: "Dr. Aseem Chauhan",
-    role: "Chancellor, Amity University",
+    role: "Chancellor, Amity University Rajasthan",
     image: "/committee/asim.jpg",
   },
   {
