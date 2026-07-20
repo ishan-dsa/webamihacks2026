@@ -7,12 +7,12 @@ import { useRef } from "react";
 const faculty = [
   {
     name: "Dr. Ashok K. Chauhan",
-    role: "Founder President, Amity Group",
+    role: "Founder President, Amity Education Group",
     image: "/committee/ashok.jpg",
     imageClass: "object-[50%_15%]",
   },
   {
-    name: "Dr. Asim Chauhan",
+    name: "Dr. Aseem Chauhan",
     role: "Chancellor, Amity University",
     image: "/committee/asim.jpg",
   },
