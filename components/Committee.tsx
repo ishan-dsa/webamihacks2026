@@ -28,7 +28,7 @@ const faculty = [
   },
   {
     name: "Prof. Bhupesh Kumar Singh",
-    role: "Host & Deputy Diretor, ASET ",
+    role: "Host & Deputy Director, ASET ",
     image: "/committee/bhupesh.jpg",
   },
   {
