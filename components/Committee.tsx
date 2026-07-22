@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const faculty = [
+const leadership = [
   {
     name: "Dr. Ashok K. Chauhan",
     role: "Founder President, Amity Education Group",
@@ -26,6 +26,9 @@ const faculty = [
     role: "Pro Vice Chancellor, Amity University Rajasthan",
     image: "/committee/aseri.jpg",
   },
+];
+
+const organizingTeam = [
   {
     name: "Prof. Bhupesh Kumar Singh",
     role: "Host & Deputy Director, ASET ",
@@ -42,6 +45,42 @@ const faculty = [
     image: "/committee/jyoti.jpg",
   },
 ];
+
+function FacultyGrid({ people, inView, delayOffset = 0 }) {
+  return (
+    <motion.div
+      layout
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+    >
+      {people.map((f, i) => (
+        <motion.div
+          key={f.name}
+          initial={{ opacity: 0, y: 40, scale: 0.95 }}
+          animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
+          transition={{ duration: 0.45, delay: delayOffset + i * 0.08 }}
+          whileHover={{ y: -8, scale: 1.03 }}
+          className="rounded-2xl p-6 text-center bg-white/[0.03] border border-cyan-500/20 backdrop-blur-sm hover:border-cyan-400/50 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)] transition-all"
+        >
+          <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-cyan-500/25 mx-auto mb-5 shadow-[0_0_20px_rgba(56,189,248,0.15)]">
+            <Image
+              src={f.image}
+              alt={f.name}
+              width={144}
+              height={144}
+              className={`w-full h-full object-cover ${
+                f.imageClass ?? "object-center"
+              }`}
+            />
+          </div>
+
+          <h3 className="text-white font-semibold text-lg mb-2">{f.name}</h3>
+
+          <p className="text-cyan-400/60 text-sm font-mono-code">{f.role}</p>
+        </motion.div>
+      ))}
+    </motion.div>
+  );
+}
 
 export default function Committee() {
   const ref = useRef(null);
@@ -83,9 +122,7 @@ export default function Committee() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
           className="text-cyan-400/70 font-mono-code text-xs tracking-[0.3em] uppercase mb-4"
-        >
-         
-        </motion.p>
+        ></motion.p>
 
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -100,48 +137,47 @@ export default function Committee() {
           the Event
         </motion.h2>
 
-        {/* Faculty grid — always visible */}
-        <motion.div
-          layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+        {/* Leadership Section */}
+        <motion.h3
+          initial={{ opacity: 0, y: 15 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="text-xl sm:text-2xl font-semibold text-white mb-6 flex items-center gap-3"
         >
-          {faculty.map((f, i) => (
-            <motion.div
-              key={f.name}
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
-              transition={{ duration: 0.45, delay: i * 0.08 }}
-              whileHover={{ y: -8, scale: 1.03 }}
-              className="rounded-2xl p-6 text-center bg-white/[0.03] border border-cyan-500/20 backdrop-blur-sm hover:border-cyan-400/50 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)] transition-all"
-            >
-              <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-cyan-500/25 mx-auto mb-5 shadow-[0_0_20px_rgba(56,189,248,0.15)]">
-                <Image
-                  src={f.image}
-                  alt={f.name}
-                  width={144}
-                  height={144}
-                  className={`w-full h-full object-cover ${
-                    f.imageClass ?? "object-center"
-                  }`}
-                />
-              </div>
+          <span className="text-cyan-400 font-mono-code text-sm tracking-[0.2em] uppercase">
+            01 /
+          </span>
+          Leadership
+        </motion.h3>
 
-              <h3 className="text-white font-semibold text-lg mb-2">
-                {f.name}
-              </h3>
+        <FacultyGrid people={leadership} inView={inView} delayOffset={0.2} />
 
-              <p className="text-cyan-400/60 text-sm font-mono-code">
-                {f.role}
-              </p>
-            </motion.div>
-          ))}
+        {/* Organizing Team Section */}
+        <motion.h3
+          initial={{ opacity: 0, y: 15 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.55 }}
+          className="text-xl sm:text-2xl font-semibold text-white mb-6 mt-16 flex items-center gap-3"
+        >
+          <span className="text-cyan-400 font-mono-code text-sm tracking-[0.2em] uppercase">
+            02 /
+          </span>
+          Organizing Team
+        </motion.h3>
+
+        <motion.div className="mb-16">
+          <FacultyGrid
+            people={organizingTeam}
+            inView={inView}
+            delayOffset={0.6}
+          />
         </motion.div>
 
         {/* Institution Info */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.9 }}
           className="grid sm:grid-cols-3 gap-4"
         >
           {[
