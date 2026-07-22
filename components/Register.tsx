@@ -116,7 +116,7 @@ export default function Register() {
                   <li>✓ Open to students across India</li>
                   <li>✓ 1 Team Captain + up to 3 Team Members</li>
                   <li>✓ ₹300 ( + GST and payment gateway charges) per Team (Amity Students)</li>
-                  <li>✓ ₹400 ( + GST and payment gateway charges) per Team (Other Colleges)</li>
+                  <li>✓ ₹400 ( + GST and payment gateway charges) per Team (Other Universities/Colleges)</li>
                   <li>✓ ₹70,000+ Prize Pool</li>
                   <li>✓ Swags & Goodies</li>
                 </ul>
