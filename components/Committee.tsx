@@ -46,7 +46,20 @@ const organizingTeam = [
   },
 ];
 
-function FacultyGrid({ people, inView, delayOffset = 0 }) {
+type FacultyMember = {
+  name: string;
+  role: string;
+  image: string;
+  imageClass?: string;
+};
+
+type FacultyGridProps = {
+  people: FacultyMember[];
+  inView: boolean;
+  delayOffset?: number;
+};
+
+function FacultyGrid({ people, inView, delayOffset = 0 }: FacultyGridProps) {
   return (
     <motion.div
       layout
