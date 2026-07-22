@@ -179,7 +179,7 @@ export default function Committee() {
           className="text-xl sm:text-2xl font-semibold text-white mb-6 mt-16 flex items-center gap-3"
         >
           <span className="text-cyan-400 font-mono-code text-sm tracking-[0.2em] uppercase">
-            02 /
+            
           </span>
           Host
         </motion.h3>
@@ -194,7 +194,7 @@ export default function Committee() {
           className="text-xl sm:text-2xl font-semibold text-white mb-6 mt-16 flex items-center gap-3"
         >
           <span className="text-cyan-400 font-mono-code text-sm tracking-[0.2em] uppercase">
-            03 /
+            
           </span>
           Faculty Coordinators
         </motion.h3>
