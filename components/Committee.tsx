@@ -28,21 +28,24 @@ const leadership = [
   },
 ];
 
-const organizingTeam = [
+const host = [
   {
     name: "Prof. Bhupesh Kumar Singh",
     role: "Host & Deputy Director, ASET ",
     image: "/committee/bhupesh.jpg",
   },
-  {
-    name: "Prof. Sunil Pathak",
-    role: "Faculty Coordinator & HOD CSE",
-    image: "/committee/sunil.jpg",
-  },
+];
+
+const facultyCoordinators = [
   {
     name: "Dr. Jyoti Khandelwal",
     role: "Faculty Coordinator",
     image: "/committee/jyoti.jpg",
+  },
+  {
+    name: "Prof. Sunil Pathak",
+    role: "Faculty Coordinator & HOD CSE",
+    image: "/committee/sunil.jpg",
   },
 ];
 
@@ -165,7 +168,7 @@ export default function Committee() {
 
         <FacultyGrid people={leadership} inView={inView} delayOffset={0.2} />
 
-        {/* Organizing Team Section */}
+        {/* Host Section */}
         <motion.h3
           initial={{ opacity: 0, y: 15 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -175,14 +178,29 @@ export default function Committee() {
           <span className="text-cyan-400 font-mono-code text-sm tracking-[0.2em] uppercase">
             02 /
           </span>
-          Organizing Team
+          Host
+        </motion.h3>
+
+        <FacultyGrid people={host} inView={inView} delayOffset={0.6} />
+
+        {/* Faculty Coordinators Section */}
+        <motion.h3
+          initial={{ opacity: 0, y: 15 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="text-xl sm:text-2xl font-semibold text-white mb-6 mt-16 flex items-center gap-3"
+        >
+          <span className="text-cyan-400 font-mono-code text-sm tracking-[0.2em] uppercase">
+            03 /
+          </span>
+          Faculty Coordinators
         </motion.h3>
 
         <motion.div className="mb-16">
           <FacultyGrid
-            people={organizingTeam}
+            people={facultyCoordinators}
             inView={inView}
-            delayOffset={0.6}
+            delayOffset={0.85}
           />
         </motion.div>
 
@@ -190,7 +208,7 @@ export default function Committee() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.9 }}
+          transition={{ duration: 0.6, delay: 1.1 }}
           className="grid sm:grid-cols-3 gap-4"
         >
           {[
@@ -232,3 +250,4 @@ export default function Committee() {
     </section>
   );
 }
+
