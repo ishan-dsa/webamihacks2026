@@ -20,7 +20,7 @@ const events = [
     phase: "03",
     title: "Hackathon Kickoff",
     desc: "Opening ceremony, problem statements revealed, and the 24-hour clock begins.",
-    tag: "24TH Sep · 09:00 AM",
+    tag: "24Th Sep · 09:00 AM",
     active: false,
   },
   {
@@ -34,21 +34,21 @@ const events = [
     phase: "05",
     title: "Project Development",
     desc: "Build, iterate, and ship. Code reviews, workshops, and midnight surprises await.",
-    tag: "24TH–25TH Sep",
+    tag: "24Th–25Th Sep",
     active: false,
   },
   {
     phase: "06",
     title: "Final Evaluation",
     desc: "Present your project to a jury panel. Judged on innovation, impact, and execution.",
-    tag: "25TH Sep · Morning",
+    tag: "25Th Sep · Morning",
     active: false,
   },
   {
     phase: "07",
     title: "Winner Announcement",
     desc: "Awards, recognition, and the celebration of what 24 hours of focused building can create.",
-    tag: "25TH Sep · PM",
+    tag: "25Th Sep · PM",
     active: false,
   },
 ];
