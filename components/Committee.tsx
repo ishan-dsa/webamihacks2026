@@ -37,16 +37,19 @@ const host = [
 ];
 
 const facultyCoordinators = [
+
+
+{
+    name: "Prof. Sunil Pathak",
+    role: "Faculty Coordinator & HOD CSE",
+    image: "/committee/sunil.jpg",
+  },
   {
     name: "Dr. Jyoti Khandelwal",
     role: "Faculty Coordinator",
     image: "/committee/jyoti.jpg",
   },
-  {
-    name: "Prof. Sunil Pathak",
-    role: "Faculty Coordinator & HOD CSE",
-    image: "/committee/sunil.jpg",
-  },
+  
 ];
 
 type FacultyMember = {
@@ -161,7 +164,7 @@ export default function Committee() {
           className="text-xl sm:text-2xl font-semibold text-white mb-6 flex items-center gap-3"
         >
           <span className="text-cyan-400 font-mono-code text-sm tracking-[0.2em] uppercase">
-            01 /
+            
           </span>
           Leadership
         </motion.h3>
