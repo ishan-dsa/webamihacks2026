@@ -46,7 +46,7 @@ const facultyCoordinators = [
   },
   {
     name: "Dr. Jyoti Khandelwal",
-    role: "Faculty Coordinator",
+    role: "Faculty Coordinator & Associate Professor CSE",
     image: "/committee/jyoti.jpg",
   },
   
